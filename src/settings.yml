@@ -39,6 +39,6 @@ custom_fields:
   field_type: author_bio
   name: About Weather Art
   description: Artist-inspired artwork driven by your current local weather. Illustrations are original AI-assisted studies. Weather data by <a href="https://open-meteo.com/">Open-Meteo</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).
-name: Weather Art
+name: Weather Art (for Frame)
 description: Weather painted in famous styles
 refresh_interval: 60
