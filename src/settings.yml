@@ -26,10 +26,11 @@ custom_fields:
 - keyname: scene
   field_type: select
   name: Scene
-  description: Choose the setting depicted in the artwork.
+  description: Choose the setting depicted in the artwork. Mountain Lake always uses Neutral.
   options:
   - Small village: village
   - Big city: city
+  - Mountain Lake: mountain-lake
   default: village
 - keyname: weather_location
   field_type: lat_lon

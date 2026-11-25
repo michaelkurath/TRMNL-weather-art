@@ -27,16 +27,24 @@ The artist studies reinterpret the clear, fog, and windy-rain compositions. Each
 | Small village | [Study](artwork/studies/village-van-gogh.jpg) | [Study](artwork/studies/village-warhol.jpg) |
 | Big city | [Study](artwork/studies/city-van-gogh.jpg) | [Study](artwork/studies/city-warhol.jpg) |
 
-### Mountain Lake Frame proofs
+### Mountain Lake on Frame
 
-Mountain Lake has two Neutral weather proofs for display review. The recipe’s Scene menu currently offers Small village and Big city.
+Choose Mountain Lake in the Scene menu. It uses the Neutral treatment for every Artist selection.
 
 | Weather | Landscape (2560 × 1440) | Portrait (1440 × 2560) |
 | --- | --- | --- |
 | Clear | [JPEG](artwork/frame/mountain-lake/neutral/clear.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/clear-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/mountain-lake/neutral/overcast.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/overcast-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/mountain-lake/neutral/fog.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/fog-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/mountain-lake/neutral/calm-rain.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/calm-rain-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/mountain-lake/neutral/windy-rain.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/windy-rain-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/mountain-lake/neutral/dry-wind.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/dry-wind-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/mountain-lake/neutral/snow.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/snow-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/mountain-lake/neutral/thunderstorm.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/thunderstorm-portrait.jpg) |
 
-## Prototype
+## Prototypes
+
+The Neutral Small Village clear-night study tests a moonlit palette and warm window lights on Frame. Preview the [landscape](artwork/studies/village-neutral-clear-night.jpg) or [portrait](artwork/studies/village-neutral-clear-night-portrait.jpg) JPEG. The recipe still uses its daytime artwork at night.
 
 Open [the procedural village experiment](prototype/procedural-village.html) locally in a browser. It renders four sample conditions deterministically and exports 2560 × 1440 PNGs. It was an earlier experiment in mapping weather inputs to individual strokes and scene elements.
 

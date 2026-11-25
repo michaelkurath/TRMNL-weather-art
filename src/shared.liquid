@@ -7,9 +7,13 @@
   {% endif %}
 
   {% assign scene = 'village' %}
-  {% if settings.scene == 'city' %}
-    {% assign scene = 'city' %}
-  {% endif %}
+  {% case settings.scene %}
+    {% when 'city' %}
+      {% assign scene = 'city' %}
+    {% when 'mountain-lake' %}
+      {% assign scene = 'mountain-lake' %}
+      {% assign artist = 'neutral' %}
+  {% endcase %}
 
   {% assign condition = 'clear' %}
   {% assign wind_kmh = wind_speed | default: 0 | plus: 0 %}
