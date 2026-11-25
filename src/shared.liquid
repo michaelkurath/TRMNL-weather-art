@@ -35,15 +35,6 @@
       {% endif %}
   {% endcase %}
 
-  {% if artist != 'neutral' %}
-    {% case condition %}
-      {% when 'thunderstorm' %}
-        {% assign condition = 'windy-rain' %}
-      {% when 'dry-wind' %}
-        {% assign condition = 'clear' %}
-    {% endcase %}
-  {% endif %}
-
   {% capture artwork_url %}https://raw.githubusercontent.com/michaelkurath/TRMNL-weather-art/main/artwork/frame/{{ scene }}/{{ artist }}/{{ condition }}{% endcapture %}
   {% capture artwork_alt %}Weather Art, {{ scene }}, {{ condition | replace: '-', ' ' }}{% endcapture %}
   <div class="layout">
