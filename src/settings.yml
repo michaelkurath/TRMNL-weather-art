@@ -2,15 +2,17 @@
 strategy: polling
 no_screen_padding: 'yes'
 dark_mode: 'no'
-static_data:
+static_data: ''
 polling_verb: get
-framework_version:
-serverless_language:
-refresh_interval_floor:
+framework_version: 3.4.7
+serverless_language: ''
+refresh_interval_floor: ''
 polling_url: 'https://api.open-meteo.com/v1/forecast?latitude={{ weather_location | default: ''47.3769,8.5417'' | split: '','' | first | strip }}&longitude={{ weather_location | default: ''47.3769,8.5417'' | split: '','' | last | strip }}&current=weather_code'
 polling_headers: ''
-polling_body:
+polling_body: ''
 id: 552013
+oauth_enabled: 'false'
+oauth_pkce_enabled: 'no'
 custom_fields:
 - keyname: artist
   field_type: select
