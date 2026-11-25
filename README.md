@@ -42,9 +42,11 @@ Choose Mountain Lake in the Scene menu. It uses the Neutral treatment for every 
 | Snow | [JPEG](artwork/frame/mountain-lake/neutral/snow.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/snow-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/mountain-lake/neutral/thunderstorm.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/thunderstorm-portrait.jpg) |
 
-## Prototypes
+### Clear night in Small Village
 
-The Neutral Small Village clear-night study tests a moonlit palette and warm window lights on Frame. Preview the [landscape](artwork/studies/village-neutral-clear-night.jpg) or [portrait](artwork/studies/village-neutral-clear-night-portrait.jpg) JPEG. The recipe still uses its daytime artwork at night.
+Choose **Small village** and **Neutral** to see the moonlit village when Open-Meteo reports clear sky, night, and wind below 30 km/h. Preview the [landscape](artwork/frame/village/neutral/clear-night.jpg) or [portrait](artwork/frame/village/neutral/clear-night-portrait.jpg) JPEG. The regular weather artwork applies at sunrise, during other weather, and when the day/night or wind reading is missing.
+
+## Prototype
 
 Open [the procedural village experiment](prototype/procedural-village.html) locally in a browser. It renders four sample conditions deterministically and exports 2560 × 1440 PNGs. It was an earlier experiment in mapping weather inputs to individual strokes and scene elements.
 
@@ -52,7 +54,7 @@ Open [the procedural village experiment](prototype/procedural-village.html) loca
 
 Download [Weather Art.zip](dist/Weather_Art.zip) and use **Plugins → Private Plugin → Import new** in TRMNL. Set **Artist**, **Scene**, and **Weather location**, then save and force refresh if you want to see the new selection immediately. Weather location defaults to Zürich.
 
-The recipe polls [Open-Meteo](https://open-meteo.com/) hourly for the current weather code and 10 m wind speed. Weather data is provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The recipe polls [Open-Meteo](https://open-meteo.com/) hourly for the current weather code, 10 m wind speed, and day/night flag. Weather data is provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 Neutral, Van Gogh and Warhol each cover all eight daytime weather states for the village and city. Thunderstorm, snowfall and fog codes select their own scenes. Rain and drizzle use windy-rain art at 30 km/h or above and calm-rain art below that speed. Dry conditions at 30 km/h or above use dry-wind art. Otherwise, overcast has its own scene and clear to partly cloudy conditions use clear art. Missing or unknown weather codes use clear art, and missing wind speed leaves the wind variant off.
 
