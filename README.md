@@ -12,15 +12,20 @@ The weather location and the depicted scene are independent. Russikon's weather 
 
 ## Composition proofs
 
-Each sheet contains clear daylight on top, fog in the middle, and windy rain at the bottom. Each row is a landscape composition. The Warhol-inspired rows contain two repetitions of the scene in different inks.
+The neutral sheets establish the viewpoint, landmarks, and weather cues for each scene. Read each sheet from top to bottom. All eight daytime conditions have a reference for all three scenes.
 
-| Scene | Neutral reference | Van Gogh–inspired | Warhol-inspired |
+| Scene | Clear · Fog · Windy rain | Overcast · Calm rain · Snow | Dry wind · Thunderstorm |
 | --- | --- | --- | --- |
-| Small village | [Neutral](artwork/neutral/village.jpg) | [Study](artwork/studies/village-van-gogh.jpg) | [Study](artwork/studies/village-warhol.jpg) |
-| Big city | [Neutral](artwork/neutral/city.jpg) | [Study](artwork/studies/city-van-gogh.jpg) | [Study](artwork/studies/city-warhol.jpg) |
-| Mountain lake | [Neutral](artwork/neutral/mountain-lake.jpg) | — | — |
+| Small village | [Sheet](artwork/neutral/village.jpg) | [Sheet](artwork/neutral/village-overcast-rain-snow.jpg) | [Sheet](artwork/neutral/village-dry-wind-thunderstorm.jpg) |
+| Big city | [Sheet](artwork/neutral/city.jpg) | [Sheet](artwork/neutral/city-overcast-rain-snow.jpg) | [Sheet](artwork/neutral/city-dry-wind-thunderstorm.jpg) |
+| Mountain lake | [Sheet](artwork/neutral/mountain-lake.jpg) | [Sheet](artwork/neutral/mountain-lake-overcast-rain-snow.jpg) | [Sheet](artwork/neutral/mountain-lake-dry-wind-thunderstorm.jpg) |
 
-The neutral sheets establish the viewpoint, landmarks, and visual cues for the weather. The artist studies reinterpret those same compositions. The sheets are AI-generated visual proofs intended for comparison before preparing individual Frame assets.
+The artist studies reinterpret the clear, fog, and windy-rain compositions. Each Warhol-inspired row repeats the scene in two ink palettes. The sheets are AI-generated visual references.
+
+| Scene | Van Gogh–inspired | Warhol-inspired |
+| --- | --- | --- |
+| Small village | [Study](artwork/studies/village-van-gogh.jpg) | [Study](artwork/studies/village-warhol.jpg) |
+| Big city | [Study](artwork/studies/city-van-gogh.jpg) | [Study](artwork/studies/city-warhol.jpg) |
 
 ## Prototype
 
