@@ -35,7 +35,7 @@ Open [the procedural village experiment](prototype/procedural-village.html) loca
 
 Download [Weather Art.zip](dist/Weather_Art.zip) and use **Plugins → Private Plugin → Import new** in TRMNL. Set **Artist**, **Scene**, and **Weather location**, then save and force refresh if you want to see the new selection immediately. Weather location defaults to Zürich.
 
-The recipe polls [Open-Meteo](https://open-meteo.com/) hourly and displays one of twelve pre-rendered images. It uses three art states in this preview: clear for dry conditions, fog for fog or snowfall, and windy rain for drizzle, rain, or thunderstorms. When weather data is missing it shows the clear artwork. Weather data is provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The recipe polls [Open-Meteo](https://open-meteo.com/) hourly and displays one of eighteen pre-rendered images. Choose Neutral for the naturalistic village or city references. It uses three art states in this preview: clear for dry conditions, fog for fog or snowfall, and windy rain for drizzle, rain, or thunderstorms. When weather data is missing it shows the clear artwork. Weather data is provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 All four TRMNL layouts use the same full-color landscape assets and preserve the picture's aspect ratio. Landscape fills a 16:9 Frame. Portrait and differently shaped layouts show the centered artwork with margins. The source art comes from the composition proofs, so the images are preview resolution. Separate portrait artwork and additional artists and scenes are future work.
 

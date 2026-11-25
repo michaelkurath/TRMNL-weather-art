@@ -21,6 +21,7 @@ custom_fields:
   options:
   - Van Gogh–inspired: van-gogh
   - Warhol-inspired: warhol
+  - Neutral: neutral
   default: van-gogh
 - keyname: scene
   field_type: select

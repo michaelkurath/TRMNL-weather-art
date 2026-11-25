@@ -2,6 +2,8 @@
   {% assign artist = 'van-gogh' %}
   {% if settings.artist == 'warhol' %}
     {% assign artist = 'warhol' %}
+  {% elsif settings.artist == 'neutral' %}
+    {% assign artist = 'neutral' %}
   {% endif %}
 
   {% assign scene = 'village' %}
