@@ -22,9 +22,14 @@
     {% endcase %}
   {% endif %}
 
+  {% capture artwork_url %}https://raw.githubusercontent.com/michaelkurath/TRMNL-weather-art/main/artwork/frame/{{ scene }}/{{ artist }}/{{ condition }}{% endcapture %}
+  {% capture artwork_alt %}Weather Art, {{ scene }}, {{ condition | replace: '-', ' ' }}{% endcapture %}
   <div class="layout">
-    <img class="image image--contain image-dither w--full h--full"
-         src="https://raw.githubusercontent.com/michaelkurath/TRMNL-weather-art/main/artwork/frame/{{ scene }}/{{ artist }}/{{ condition }}.jpg"
-         alt="Weather Art, {{ scene }}, {{ condition | replace: '-', ' ' }}">
+    <img class="image image--contain image-dither w--full h--full{% if artist == 'neutral' %} portrait:hidden{% endif %}"
+         src="{{ artwork_url }}.jpg" alt="{{ artwork_alt }}">
+    {% if artist == 'neutral' %}
+      <img class="image image--contain image-dither w--full h--full hidden portrait:visible"
+           src="{{ artwork_url }}-portrait.jpg" alt="{{ artwork_alt }}">
+    {% endif %}
   </div>
 {% endtemplate %}
