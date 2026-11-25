@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weather, Without Numbers</title>
+<style>
+:root { color-scheme: light; background: #e9e5d9; color: #242923; font: 16px system-ui, sans-serif }
+* { box-sizing: border-box }
+body { margin: 0 }
+main { max-width: 1250px; padding: 28px clamp(16px, 4vw, 56px) 36px; margin: auto }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 18px; margin-bottom: 18px }
+h1 { font: 500 clamp(32px, 5vw, 52px)/1.05 Georgia, serif; margin: 0; letter-spacing: -.045em }
+header p { color: #50564b; margin: 0 }
+nav { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px }
+button { font: inherit; font-size: .86rem; border: 1px solid #8d9180; background: transparent; color: #242923; padding: 8px 12px; border-radius: 5px; cursor: pointer }
+button:hover { background: #d8dbce }
+button[aria-pressed="true"] { background: #253d39; color: #fff9e5; border-color: #253d39 }
+button:focus-visible { outline: 2px solid #415e77; outline-offset: 3px }
+#gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px }
+#gallery.single { grid-template-columns: minmax(0, 900px); justify-content: center }
+figure { margin: 0; min-width: 0 }
+canvas { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #253d39 }
+figcaption { display: flex; gap: 4px 12px; flex-wrap: wrap; justify-content: space-between; align-items: baseline; padding: 5px 0 0; font-size: .82rem; color: #454d42 }
+figcaption strong { color: #242923 }
+.export { border: 0; padding: 4px; text-decoration: underline }
+@media (max-width: 650px) { #gallery { grid-template-columns: minmax(0, 1fr) } }
+</style>
+</head>
+<body>
+<main>
+<header><h1>Weather, Without Numbers</h1><p>Van Gogh–inspired village · Sample weather</p></header>
+<nav aria-label="Weather views" id="views"></nav>
+<div id="gallery"></div>
+</main>
+<script>
+"use strict";
+
+const width = 960;
+const height = 540;
+const tau = 2 * Math.PI;
+const examples = [
+  { name: "Mild & calm", temperature: 15, wind: 2, from: 240, cloud: .25, rain: 0 },
+  { name: "Mild & windy", temperature: 15, wind: 36, from: 240, cloud: .25, rain: 0 },
+  { name: "Mild & rainy", temperature: 15, wind: 36, from: 240, cloud: .92, rain: 4 },
+  { name: "Hot & calm", temperature: 32, wind: 2, from: 240, cloud: .25, rain: 0 }
+];
+
+const inks = {
+  night: "#172f49", blue: "#315f8b", pale: "#acc9bf",
+  cream: "#f4eac5", yellow: "#e8b746", ochre: "#be713e",
+  green: "#496a4c", olive: "#8f963e", dark: "#263c37", red: "#8b493a"
+};
+
+const houses = [
+  [323,353,50,32], [370,351,45,32], [408,371,67,39],
+  [475,350,50,38], [521,379,72,45], [587,357,52,39],
+  [634,368,65,42], [693,385,73,49], [767,366,55,41],
+  [815,387,47,34], [865,375,44,29], [347,391,46,31],
+  [440,406,48,33], [600,409,52,35]
+];
+
+function randomStream(seed) {
+  return () => {
+    seed = (Math.imul(1664525, seed) + 1013904223) >>> 0;
+    return seed / 4294967296;
+  };
+}
+
+const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
+
+function polygon(ctx, points, fill, edge = null, thickness = 2) {
+  ctx.beginPath();
+  points.forEach(([x, y], index) => index ? ctx.lineTo(x, y) : ctx.moveTo(x, y));
+  ctx.closePath();
+  ctx.fillStyle = fill;
+  ctx.fill();
+  if (edge) {
+    ctx.strokeStyle = edge;
+    ctx.lineWidth = thickness;
+    ctx.stroke();
+  }
+}
+
+function brush(ctx, x, y, length, angle, arc, thickness, colour) {
+  const dx = Math.cos(angle) * length;
+  const dy = Math.sin(angle) * length;
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.quadraticCurveTo(x + dx * .48 - dy * arc, y + dy * .48 + dx * arc, x + dx, y + dy);
+  ctx.strokeStyle = colour;
+  ctx.lineWidth = thickness;
+  ctx.stroke();
+}
+
+function drawSky(ctx, weather, windX, windY, heat) {
+  const r = randomStream(214);
+  const {cloud, rain} = weather;
+  const cold = weather.temperature <= 4;
+  ctx.fillStyle = cloud > .7 ? inks.night : heat ? inks.ochre : cold ? inks.night : inks.blue;
+  ctx.fillRect(0, 0, width, height);
+
+  const sunX = 740;
+  const sunY = 110;
+  const skyPaint = cloud > .7 ? [inks.night, inks.blue, inks.blue, inks.pale] :
+    heat ? [inks.ochre, inks.yellow, inks.cream, inks.yellow] :
+    cold ? [inks.night, inks.blue, inks.pale, inks.cream] :
+    [inks.blue, inks.night, inks.pale, inks.blue, inks.cream];
+
+  if (cloud < .7) {
+    ctx.fillStyle = inks.yellow;
+    ctx.beginPath();
+    ctx.ellipse(sunX, sunY, heat ? 44 : 34, heat ? 39 : 31, -.12, 0, tau);
+    ctx.fill();
+    for (let ring = 0; ring < 5; ring++) {
+      for (let part = 0; part < 16; part++) {
+        const a = part / 16 * tau + r() * .16;
+        const radius = 12 + ring * 6;
+        brush(ctx, sunX + Math.cos(a) * radius, sunY + Math.sin(a) * radius * .82,
+          5 + r() * 6, a + Math.PI / 2, .15, 1.4 + r() * 2, r() < .5 ? inks.cream : inks.ochre);
+      }
+    }
+  }
+
+  for (let row = 0; row < 34; row++) {
+    for (let column = -2; column < 40; column++) {
+      const x = column * 26 + r() * 18;
+      const baseY = row * 11 + r() * 7;
+      const y = baseY + 12 * Math.sin(x / 110 + baseY / 98) + windX * (x - 480) * .12;
+      const dx = x - sunX;
+      const dy = y - sunY;
+      const distance = Math.hypot(dx, dy / .83);
+      const halo = cloud < .7 && distance < 119;
+      const swirlX = x - (283 + windX * 76);
+      const swirlY = y - (157 + windY * 30);
+      const swirl = Math.exp(-Math.hypot(swirlX, swirlY) / (86 + 37 * Math.abs(windX)));
+      const flowX = .8 + windX * .41 - swirlY * swirl / 25;
+      const flowY = .20 * Math.cos(x / 160 + baseY / 94) + windY * .52 -
+        windX * .39 + swirlX * swirl / 45;
+      const angle = halo ? Math.atan2(dy / .7, dx) + Math.PI / 2 : Math.atan2(flowY, flowX);
+      const colourIndex = Math.floor(r() * skyPaint.length);
+      const colour = halo && r() < .39 ? inks.yellow : skyPaint[colourIndex];
+      const length = 12 + r() * 22 + Math.hypot(windX, windY) * 22;
+      const thickness = 1.5 + r() * 4;
+      if (!halo || distance > (heat ? 48 : 39)) {
+        brush(ctx, x, y, length, angle, halo ? .18 : .05, thickness, colour);
+      }
+    }
+  }
+
+  if (cloud > .7) {
+    const rCloud = randomStream(70);
+    for (let i = 0; i < 240; i++) {
+      const x = rCloud() * width - 12;
+      const y = 44 + rCloud() * 110 + 40 * Math.sin(x / 151) - windX * x * .10;
+      const colour = [inks.pale, inks.blue, inks.night][i % 3];
+      brush(ctx, x, y, 34 + rCloud() * 42, -.14 - windX * .19, .14, 3 + rCloud() * 4, colour);
+    }
+  }
+
+  if (rain > 0) {
+    const rainStream = randomStream(993);
+    for (let i = 0; i < Math.min(440, Math.round(rain * 79)); i++) {
+      const x = rainStream() * width;
+      const y = 18 + rainStream() * 338;
+      const length = 14 + rainStream() * 31;
+      const colour = rainStream() < .52 ? inks.pale : inks.cream;
+      ctx.globalAlpha = .68;
+      brush(ctx, x, y, length, Math.atan2(.95, windX * 1.45), .015, 1.7 + rainStream() * 1.8, colour);
+    }
+    ctx.globalAlpha = 1;
+  }
+}
+
+function mountainY(x) {
+  return 333 - 28 * Math.sin(x / 123 + 1.2) - 13 * Math.cos(x / 62) + 8 * Math.sin(x / 29);
+}
+
+function drawLand(ctx, weather, heat) {
+  const r = randomStream(5793);
+  const ridge = Array.from({length: 65}, (_, index) => {
+    const x = index * 15;
+    return [x, mountainY(x)];
+  });
+  polygon(ctx, [...ridge, [width, height], [0, height]], inks.night, inks.dark);
+  for (let i = 0; i < 730; i++) {
+    const x = r() * width;
+    const y = mountainY(x) + 4 + r() * 107;
+    brush(ctx, x, y, 8 + r() * 28, .18 * Math.sin(x / 80), .12,
+      1.4 + r() * 3, [inks.blue, inks.dark, inks.pale, inks.night, inks.green][i % 5]);
+  }
+
+  const front = x => 425 - 37 * Math.cos(x / 147) + 16 * Math.sin(x / 122);
+  const field = Array.from({length: 65}, (_, index) => {
+    const x = index * 15;
+    return [x, front(x)];
+  });
+  polygon(ctx, [...field, [width, height], [0, height]], heat ? inks.ochre : inks.green, inks.dark);
+  const fieldPaint = weather.cloud > .7 ? [inks.blue, inks.green, inks.dark, inks.olive, inks.pale] :
+    heat ? [inks.olive, inks.yellow, inks.yellow, inks.ochre, inks.dark] :
+    [inks.green, inks.olive, inks.yellow, inks.dark, inks.olive];
+  for (let i = 0; i < 1950; i++) {
+    const x = r() * width - 12;
+    const y = front(x) + 2 + r() * (height - front(x));
+    const angle = .44 * Math.sin(x / 114) - .12;
+    brush(ctx, x, y, 9 + r() * 32, angle, .18, 1.5 + r() * 4.4, fieldPaint[i % 5]);
+  }
+  ctx.beginPath();
+  ctx.moveTo(445, 541);
+  ctx.bezierCurveTo(446, 492, 514, 474, 592, 415);
+  ctx.bezierCurveTo(552, 472, 503, 511, 556, 541);
+  ctx.closePath();
+  ctx.fillStyle = weather.rain ? inks.pale : inks.ochre;
+  ctx.fill();
+  for (let i = 0; i < 147; i++) {
+    const t = r();
+    const x = 592 - 111 * t + (r() - .5) * (7 + 58 * t ** 2);
+    brush(ctx, x, 417 + t * 124, 4 + r() * 15, 2.52 - t * .47, .14,
+      1 + r() * 2, [inks.cream, inks.ochre, inks.yellow, inks.pale][i % 4]);
+  }
+}
+
+function drawVillage(ctx, weather) {
+  const r = randomStream(381);
+  const walls = [inks.cream, inks.yellow, inks.pale, inks.ochre];
+  for (const [i, [x, y, w, h]] of houses.entries()) {
+    polygon(ctx, [[x,y],[x+w,y+3],[x+w-2,y+h],[x+1,y+h+2]],
+      walls[i % 4], inks.dark, 3);
+    polygon(ctx, [[x+w*.74,y],[x+w,y+3],[x+w-2,y+h],[x+w*.74,y+h+1]],
+      weather.rain ? inks.blue : inks.ochre);
+    const roof = [inks.night, inks.red, inks.blue, inks.red][i % 4];
+    polygon(ctx, [[x-4,y+3],[x+w*.14,y-h*.42],[x+w*.66,y-h*.61],[x+w+6,y+4]],
+      roof, inks.dark, 3);
+    for (let tile = 0; tile < 13; tile++) {
+      const dx = w * (.14 + r() * .67);
+      const dy = h * (.08 + r() * .25);
+      brush(ctx, x + dx, y - dy, 5 + r() * 5, -.15, .06, 1.25, tile % 3 ? inks.ochre : inks.pale);
+    }
+    for (const offset of [.16, .44]) {
+      const windowX = x + w * offset;
+      ctx.fillStyle = inks.dark;
+      ctx.fillRect(windowX, y + h*.28, w*.12, h*.28);
+      ctx.fillStyle = inks.yellow;
+      ctx.fillRect(windowX + 2, y + h*.31, w*.12 - 4, h*.19);
+    }
+  }
+
+  polygon(ctx, [[536,367],[536,311],[549,310],[560,311],[564,368]], inks.cream, inks.dark, 3);
+  polygon(ctx, [[550,313],[560,311],[564,368],[552,369]], inks.ochre);
+  polygon(ctx, [[530,314],[547,269],[565,315]], inks.night, inks.dark, 3);
+  brush(ctx, 547, 277, 19, -1.58, 0, 2, inks.dark);
+  brush(ctx, 541, 264, 12, 0, 0, 2, inks.dark);
+  ctx.fillStyle = inks.dark;
+  ctx.fillRect(542, 324, 7, 15);
+}
+
+function cypress(ctx, x, y, size, windX, seed) {
+  const r = randomStream(seed);
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.scale(size, size);
+  const lean = windX * 38;
+  ctx.beginPath();
+  ctx.moveTo(-40, 0);
+  ctx.bezierCurveTo(-52,-31,-34,-130, -20 + lean*.8,-168);
+  ctx.bezierCurveTo(-12 + lean*.75,-189,-13 + lean,-205,5 + lean,-227);
+  ctx.bezierCurveTo(6 + lean,-210,32 + lean*.75,-173,26 + lean*.6,-156);
+  ctx.bezierCurveTo(49 + lean*.22,-109,38,-27,53,0);
+  ctx.closePath();
+  ctx.fillStyle = inks.dark;
+  ctx.fill();
+  ctx.save();
+  ctx.clip();
+  for (let i = 0; i < 1350; i++) {
+    const yy = -r() * 234;
+    const xx = (r() - .5) * 104 + lean * (-yy / 227);
+    const angle = -Math.PI/2 + windX * .32 + (r() - .5) * .8;
+    brush(ctx, xx, yy, 4 + r() * 17, angle, .27, 1 + r() * 3.1,
+      [inks.blue, inks.dark, inks.green, inks.olive, inks.dark, inks.green][i % 6]);
+  }
+  ctx.restore();
+  ctx.restore();
+}
+
+function paint(canvas, weather) {
+  const ctx = canvas.getContext("2d", {alpha:false});
+  const strength = clamp(weather.wind / 36, 0, 1.25);
+  const windAngle = weather.from * Math.PI / 180;
+  const windX = -Math.sin(windAngle) * strength;
+  const windY = Math.cos(windAngle) * strength;
+  const heat = weather.temperature >= 27;
+  ctx.setTransform(canvas.width / width, 0, 0, canvas.height / height, 0, 0);
+  ctx.lineCap = "round";
+  ctx.lineJoin = "round";
+  drawSky(ctx, weather, windX, windY, heat);
+  drawLand(ctx, weather, heat);
+  drawVillage(ctx, weather);
+  cypress(ctx, 193, 469, 1.3, windX, 104);
+  cypress(ctx, 255, 447, .65, windX, 729);
+}
+
+function download(example) {
+  const frame = document.createElement("canvas");
+  frame.width = 2560;
+  frame.height = 1440;
+  paint(frame, example);
+  frame.toBlob(blob => {
+    if (!blob) return;
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+    link.download = example.name.toLowerCase().replace(" & ", "-") + ".png";
+    link.href = url;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 15000);
+  }, "image/png");
+}
+
+const gallery = document.querySelector("#gallery");
+const controls = document.querySelector("#views");
+const viewButtons = [];
+function showView(index) {
+  gallery.classList.toggle("single", index !== -1);
+  gallery.replaceChildren();
+  viewButtons.forEach((button, position) => button.setAttribute("aria-pressed", position === index + 1));
+  const visible = index === -1 ? examples : [examples[index]];
+  for (const example of visible) {
+    const figure = document.createElement("figure");
+    const canvas = document.createElement("canvas");
+    canvas.width = 1440;
+    canvas.height = 810;
+    canvas.setAttribute("role", "img");
+    canvas.setAttribute("aria-label", "Painted village under " + example.name.toLowerCase() + " conditions");
+    const caption = document.createElement("figcaption");
+    const name = document.createElement("strong");
+    name.textContent = example.name;
+    const save = document.createElement("button");
+    save.type = "button";
+    save.className = "export";
+    save.textContent = "Download Frame PNG";
+    save.setAttribute("aria-label", "Download " + example.name.toLowerCase() + " as a 2560 × 1440 PNG");
+    save.addEventListener("click", () => download(example));
+    caption.append(name, save);
+    figure.append(canvas, caption);
+    gallery.append(figure);
+    paint(canvas, example);
+  }
+}
+
+["Compare all", ...examples.map(example => example.name)].forEach((name, position) => {
+  const button = document.createElement("button");
+  button.type = "button";
+  button.textContent = name;
+  button.addEventListener("click", () => showView(position - 1));
+  viewButtons.push(button);
+  controls.append(button);
+});
+showView(-1);
+</script>
+</body>
+</html>
