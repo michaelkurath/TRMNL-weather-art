@@ -26,4 +26,12 @@ The neutral sheets establish the viewpoint, landmarks, and visual cues for the w
 
 Open [the procedural village experiment](prototype/procedural-village.html) locally in a browser. It renders four sample conditions deterministically and exports 2560 × 1440 PNGs. It was an earlier experiment in mapping weather inputs to individual strokes and scene elements.
 
-The planned recipe will map live conditions to a small set of weather states and select a finished, pre-rendered image by artist, scene, and display orientation. Live weather integration, production artwork, and TRMNL packaging are pending.
+## Install on TRMNL
+
+Download [Weather Art.zip](dist/Weather_Art.zip) and use **Plugins → Private Plugin → Import new** in TRMNL. Set **Artist**, **Scene**, and **Weather location**, then save and force refresh if you want to see the new selection immediately. Weather location defaults to Zürich.
+
+The recipe polls [Open-Meteo](https://open-meteo.com/) hourly and displays one of twelve pre-rendered images. It uses three art states in this preview: clear for dry conditions, fog for fog or snowfall, and windy rain for drizzle, rain, or thunderstorms. When weather data is missing it shows the clear artwork. Weather data is provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+All four TRMNL layouts use the same full-color landscape assets and preserve the picture's aspect ratio. Landscape fills a 16:9 Frame. Portrait and differently shaped layouts show the centered artwork with margins. The source art comes from the composition proofs, so the images are preview resolution. Separate portrait artwork and additional artists and scenes are future work.
+
+The GitHub Sync source lives in `src/` at the repository root. When the plugin is linked to this repository in TRMNL, leave its folder setting blank. Use `trmnlp serve` for local preview. After editing the recipe, rebuild the import ZIP from the repository root with `zip -j dist/Weather_Art.zip src/*.liquid src/settings.yml`.
