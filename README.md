@@ -35,8 +35,12 @@ Open [the procedural village experiment](prototype/procedural-village.html) loca
 
 Download [Weather Art.zip](dist/Weather_Art.zip) and use **Plugins → Private Plugin → Import new** in TRMNL. Set **Artist**, **Scene**, and **Weather location**, then save and force refresh if you want to see the new selection immediately. Weather location defaults to Zürich.
 
-The recipe polls [Open-Meteo](https://open-meteo.com/) hourly and displays a pre-rendered image from 18 landscape and six portrait compositions. Choose Neutral for the naturalistic village or city references. It uses three art states in this preview: clear for dry conditions, fog for fog or snowfall, and windy rain for drizzle, rain, or thunderstorms. When weather data is missing it shows the clear artwork. Weather data is provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+The recipe polls [Open-Meteo](https://open-meteo.com/) hourly for the current weather code and 10 m wind speed. Weather data is provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-All four layouts preserve the artwork's aspect ratio. Neutral automatically switches to dedicated 1440 × 2560 artwork in portrait for the village and city. The Van Gogh and Warhol studies use their landscape compositions centered in portrait. Landscape fills a 16:9 Frame in full view, and differently shaped layouts can have margins.
+Neutral supports eight daytime states for the village and city in both orientations. Thunderstorm, snowfall and fog codes select their own scenes. Rain and drizzle use windy-rain art at 30 km/h or above and calm-rain art below that speed. Dry conditions at 30 km/h or above use dry-wind art. Otherwise, overcast has its own scene and clear to partly cloudy conditions use clear art. Missing or unknown weather codes use clear art, and missing wind speed leaves the wind variant off.
+
+Van Gogh and Warhol keep their three existing studies. Overcast and dry wind use clear art, snow uses fog art, and calm rain and thunderstorms use windy-rain art.
+
+All four layouts preserve the artwork's aspect ratio. Neutral automatically switches to dedicated 1440 × 2560 artwork in portrait for all eight village and city weather states. The Van Gogh and Warhol studies use their landscape compositions centered in portrait. Landscape fills a 16:9 Frame in full view, and differently shaped layouts can have margins.
 
 The GitHub Sync source lives in `src/` at the repository root. When the plugin is linked to this repository in TRMNL, leave its folder setting blank. Use `trmnlp serve` for local preview. After editing the recipe, rebuild the import ZIP from the repository root with `zip -j dist/Weather_Art.zip src/*.liquid src/settings.yml`.

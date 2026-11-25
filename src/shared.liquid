@@ -12,13 +12,37 @@
   {% endif %}
 
   {% assign condition = 'clear' %}
-  {% if weather_code != nil and weather_code != blank %}
-    {% assign code = weather_code | append: '' %}
-    {% case code %}
-      {% when '45', '48', '71', '73', '75', '77', '85', '86' %}
-        {% assign condition = 'fog' %}
-      {% when '51', '53', '55', '56', '57', '61', '63', '65', '66', '67', '80', '81', '82', '95', '96', '97', '99' %}
+  {% assign wind_kmh = wind_speed | default: 0 | plus: 0 %}
+  {% assign code = weather_code | append: '' %}
+  {% case code %}
+    {% when '95', '96', '97', '99' %}
+      {% assign condition = 'thunderstorm' %}
+    {% when '71', '73', '75', '77', '85', '86' %}
+      {% assign condition = 'snow' %}
+    {% when '45', '48' %}
+      {% assign condition = 'fog' %}
+    {% when '51', '53', '55', '56', '57', '61', '63', '65', '66', '67', '80', '81', '82' %}
+      {% if wind_kmh >= 30 %}
         {% assign condition = 'windy-rain' %}
+      {% else %}
+        {% assign condition = 'calm-rain' %}
+      {% endif %}
+    {% when '0', '1', '2', '3' %}
+      {% if wind_kmh >= 30 %}
+        {% assign condition = 'dry-wind' %}
+      {% elsif code == '3' %}
+        {% assign condition = 'overcast' %}
+      {% endif %}
+  {% endcase %}
+
+  {% if artist != 'neutral' %}
+    {% case condition %}
+      {% when 'snow' %}
+        {% assign condition = 'fog' %}
+      {% when 'calm-rain', 'thunderstorm' %}
+        {% assign condition = 'windy-rain' %}
+      {% when 'overcast', 'dry-wind' %}
+        {% assign condition = 'clear' %}
     {% endcase %}
   {% endif %}
 
