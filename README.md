@@ -27,6 +27,15 @@ The artist studies reinterpret the clear, fog, and windy-rain compositions. Each
 | Small village | [Study](artwork/studies/village-van-gogh.jpg) | [Study](artwork/studies/village-warhol.jpg) |
 | Big city | [Study](artwork/studies/city-van-gogh.jpg) | [Study](artwork/studies/city-warhol.jpg) |
 
+### Mountain Lake Frame proofs
+
+Mountain Lake has two Neutral weather proofs for display review. The recipe’s Scene menu currently offers Small village and Big city.
+
+| Weather | Landscape (2560 × 1440) | Portrait (1440 × 2560) |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/mountain-lake/neutral/clear.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/clear-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/mountain-lake/neutral/thunderstorm.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/thunderstorm-portrait.jpg) |
+
 ## Prototype
 
 Open [the procedural village experiment](prototype/procedural-village.html) locally in a browser. It renders four sample conditions deterministically and exports 2560 × 1440 PNGs. It was an earlier experiment in mapping weather inputs to individual strokes and scene elements.
