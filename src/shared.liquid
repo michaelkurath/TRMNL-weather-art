@@ -37,11 +37,9 @@
 
   {% if artist != 'neutral' %}
     {% case condition %}
-      {% when 'snow' %}
-        {% assign condition = 'fog' %}
-      {% when 'calm-rain', 'thunderstorm' %}
+      {% when 'thunderstorm' %}
         {% assign condition = 'windy-rain' %}
-      {% when 'overcast', 'dry-wind' %}
+      {% when 'dry-wind' %}
         {% assign condition = 'clear' %}
     {% endcase %}
   {% endif %}

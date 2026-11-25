@@ -39,8 +39,8 @@ The recipe polls [Open-Meteo](https://open-meteo.com/) hourly for the current we
 
 Neutral supports eight daytime states for the village and city in both orientations. Thunderstorm, snowfall and fog codes select their own scenes. Rain and drizzle use windy-rain art at 30 km/h or above and calm-rain art below that speed. Dry conditions at 30 km/h or above use dry-wind art. Otherwise, overcast has its own scene and clear to partly cloudy conditions use clear art. Missing or unknown weather codes use clear art, and missing wind speed leaves the wind variant off.
 
-Van Gogh and Warhol keep their three existing studies. Overcast and dry wind use clear art, snow uses fog art, and calm rain and thunderstorms use windy-rain art.
+Van Gogh and Warhol cover six weather states per scene: clear, overcast, fog, calm rain, windy rain and snow. Dry wind uses clear art, and thunderstorms use windy-rain art.
 
-All four layouts preserve the artwork's aspect ratio. The Frame switches automatically between landscape and dedicated 1440 × 2560 portrait artwork. Neutral covers eight weather states per scene. Van Gogh and Warhol each have portrait and landscape compositions for clear, fog and windy rain. The portrait Warhol compositions stack their two ink treatments vertically. Differently shaped layouts can have margins.
+All four layouts preserve the artwork's aspect ratio. The Frame switches automatically between landscape and dedicated 1440 × 2560 portrait artwork. Neutral covers eight weather states per scene. Van Gogh and Warhol each have portrait and landscape compositions for all six of their weather states. The portrait Warhol compositions stack their two ink treatments vertically. Differently shaped layouts can have margins.
 
 The GitHub Sync source lives in `src/` at the repository root. When the plugin is linked to this repository in TRMNL, leave its folder setting blank. Use `trmnlp serve` for local preview. After editing the recipe, rebuild the import ZIP from the repository root with `zip -j dist/Weather_Art.zip src/*.liquid src/settings.yml`.
