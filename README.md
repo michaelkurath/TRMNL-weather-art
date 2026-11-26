@@ -20,7 +20,7 @@ In Big City, **Current city style** uses the style already saved by an earlier v
 
 ## Artwork coverage
 
-Each completed weather state has landscape and portrait JPEGs. All portrait files are 1440 × 2560. The eight daytime states are clear, overcast, fog, calm rain, windy rain, dry wind, snow, and thunderstorm.
+Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 2560 portrait JPEG. The eight daytime states are clear, overcast, fog, calm rain, windy rain, dry wind, snow, and thunderstorm.
 
 | Scene | Style | Daytime | Clear night |
 | --- | --- | --- | --- |
@@ -43,11 +43,11 @@ Each completed weather state has landscape and portrait JPEGs. All portrait file
 
 Dedicated night artwork currently covers clear skies. All other nighttime weather uses the corresponding regular weather artwork.
 
-### Landscape resolution gaps
+### Landscape source resolution
 
-The following 28 existing landscape JPEGs are 928 × 522 and still need 2560 × 1440 versions.
+The following 28 landscape compositions were re-exported at 2560 × 1440 from their original PNG studies. These exports are upscaled from the original study panels.
 
-| Scene | Style | Weather states |
+| Scene | Style | Re-exported weather states |
 | --- | --- | --- |
 | Small Village and Big City | Neutral | All eight daytime states in each scene |
 | Small Village and Big City | Van Gogh and Warhol | Clear, fog, and windy rain in each scene and style |
