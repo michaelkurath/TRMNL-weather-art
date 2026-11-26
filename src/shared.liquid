@@ -58,14 +58,7 @@
       {% endif %}
   {% endcase %}
 
-  {% assign has_night_art = false %}
-  {% if artist == 'neutral' or artist == 'picasso' or artist == 'van-gogh' %}
-    {% assign has_night_art = true %}
-  {% elsif artist == 'warhol' and scene == 'village' %}
-    {% assign has_night_art = true %}
-  {% endif %}
-
-  {% if daylight == '0' and has_night_art %}
+  {% if daylight == '0' %}
     {% case condition %}
       {% when 'overcast', 'fog', 'calm-rain', 'windy-rain', 'dry-wind', 'snow', 'thunderstorm' %}
         {% assign condition = condition | append: '-night' %}
