@@ -1,23 +1,27 @@
 {% template weather_art %}
-  {% assign artist = 'van-gogh' %}
-  {% if settings.artist == 'warhol' %}
-    {% assign artist = 'warhol' %}
-  {% elsif settings.artist == 'neutral' %}
-    {% assign artist = 'neutral' %}
-  {% endif %}
-
   {% assign scene = 'village' %}
+  {% assign requested_artist = settings.artist %}
   {% case settings.scene %}
     {% when 'city' %}
       {% assign scene = 'city' %}
+      {% case settings.city_artist %}
+        {% when 'van-gogh', 'warhol', 'neutral' %}
+          {% assign requested_artist = settings.city_artist %}
+      {% endcase %}
     {% when 'mountain-lake' %}
       {% assign scene = 'mountain-lake' %}
-      {% assign artist = 'neutral' %}
+      {% assign requested_artist = 'neutral' %}
   {% endcase %}
 
-  {% if scene == 'village' and settings.artist == 'picasso' %}
-    {% assign artist = 'picasso' %}
-  {% endif %}
+  {% assign artist = 'van-gogh' %}
+  {% case requested_artist %}
+    {% when 'warhol', 'neutral' %}
+      {% assign artist = requested_artist %}
+    {% when 'picasso' %}
+      {% if scene == 'village' %}
+        {% assign artist = 'picasso' %}
+      {% endif %}
+  {% endcase %}
 
   {% assign condition = 'clear' %}
   {% assign wind_kmh = wind_speed | default: 0 | plus: 0 %}
@@ -41,7 +45,7 @@
         {% assign condition = 'dry-wind' %}
       {% elsif code == '3' %}
         {% assign condition = 'overcast' %}
-      {% elsif code == '0' and daylight == '0' and wind_speed != nil and scene == 'village' and artist == 'neutral' %}
+      {% elsif code == '0' and daylight == '0' and wind_speed != nil %}
         {% assign condition = 'clear-night' %}
       {% endif %}
   {% endcase %}
