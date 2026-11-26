@@ -26,11 +26,9 @@ custom_fields:
 - keyname: art_style
   field_type: select
   name: Artist
-  description: Pick a style to use across all scenes. Use saved style keeps choices from older versions when available.
-  default: current
+  description: Pick a style to use across all scenes.
   optional: true
   options:
-  - Use saved style: current
   - Van Gogh–inspired: van-gogh
   - Warhol-inspired: warhol
   - Picasso-inspired: picasso
