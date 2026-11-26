@@ -18,6 +18,40 @@ The weather location and the depicted scene are independent. Russikon's weather 
 
 In Big City, **Current city style** uses the style already saved by an earlier version of the recipe, or Van Gogh on a fresh installation. Choose a named style to set it explicitly for Big City.
 
+## Artwork coverage
+
+Each completed weather state has landscape and portrait JPEGs. All portrait files are 1440 × 2560. The eight daytime states are clear, overcast, fog, calm rain, windy rain, dry wind, snow, and thunderstorm.
+
+| Scene | Style | Daytime | Clear night |
+| --- | --- | --- | --- |
+| Small Village | Neutral | 8 of 8 | Ready |
+| Small Village | Van Gogh | 8 of 8 | Missing |
+| Small Village | Warhol | 8 of 8 | Missing |
+| Small Village | Picasso | 8 of 8 | Missing |
+| Big City | Neutral | 8 of 8 | Missing |
+| Big City | Van Gogh | 8 of 8 | Missing |
+| Big City | Warhol | 8 of 8 | Missing |
+| Mountain Lake | Neutral | 8 of 8 | Ready |
+
+### Missing scene and style combinations
+
+| Scene | Styles without coverage |
+| --- | --- |
+| Small Village | Banksy, Dalí |
+| Big City | Picasso, Banksy, Dalí |
+| Mountain Lake | Van Gogh, Warhol, Picasso, Banksy, Dalí |
+
+Dedicated night artwork currently covers clear skies. All other nighttime weather uses the corresponding regular weather artwork.
+
+### Landscape resolution gaps
+
+The following 28 existing landscape JPEGs are 928 × 522 and still need 2560 × 1440 versions.
+
+| Scene | Style | Weather states |
+| --- | --- | --- |
+| Small Village and Big City | Neutral | All eight daytime states in each scene |
+| Small Village and Big City | Van Gogh and Warhol | Clear, fog, and windy rain in each scene and style |
+
 ## Composition proofs
 
 The neutral sheets establish the viewpoint, landmarks, and weather cues for each scene. Read each sheet from top to bottom. All eight daytime conditions have a reference for all three scenes.
@@ -42,6 +76,7 @@ Choose Mountain Lake in the Scene menu. The recipe applies the Neutral style aut
 | Weather | Landscape (2560 × 1440) | Portrait (1440 × 2560) |
 | --- | --- | --- |
 | Clear | [JPEG](artwork/frame/mountain-lake/neutral/clear.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/clear-portrait.jpg) |
+| Clear night | [JPEG](artwork/frame/mountain-lake/neutral/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/clear-night-portrait.jpg) |
 | Overcast | [JPEG](artwork/frame/mountain-lake/neutral/overcast.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/overcast-portrait.jpg) |
 | Fog | [JPEG](artwork/frame/mountain-lake/neutral/fog.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/fog-portrait.jpg) |
 | Calm rain | [JPEG](artwork/frame/mountain-lake/neutral/calm-rain.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/calm-rain-portrait.jpg) |
@@ -65,9 +100,9 @@ Select **Small village**, then **Picasso-inspired**, for an original Cubist inte
 | Snow | [JPEG](artwork/frame/village/picasso/snow.jpg) | [JPEG](artwork/frame/village/picasso/snow-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/village/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/village/picasso/thunderstorm-portrait.jpg) |
 
-### Clear night in Small Village
+### Clear nights
 
-Choose **Small village** and **Neutral** to see the moonlit village when Open-Meteo reports clear sky, night, and wind below 30 km/h. Preview the [landscape](artwork/frame/village/neutral/clear-night.jpg) or [portrait](artwork/frame/village/neutral/clear-night-portrait.jpg) JPEG. The regular weather artwork applies at sunrise, during other weather, and when the day/night or wind reading is missing.
+**Neutral Small Village** and **Mountain Lake** show their moonlit artwork when Open-Meteo reports clear sky, night, and wind below 30 km/h. Preview Small Village in [landscape](artwork/frame/village/neutral/clear-night.jpg) or [portrait](artwork/frame/village/neutral/clear-night-portrait.jpg). The regular weather artwork applies after sunrise, during other weather, and when the day/night or wind reading is missing.
 
 ## Prototype
 
