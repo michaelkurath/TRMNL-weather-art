@@ -58,15 +58,6 @@
       {% endif %}
   {% endcase %}
 
-  {% if daylight == '0' %}
-    {% if artist == 'neutral' or artist == 'picasso' %}
-      {% case condition %}
-        {% when 'overcast', 'fog', 'calm-rain', 'windy-rain', 'dry-wind', 'snow', 'thunderstorm' %}
-          {% assign condition = condition | append: '-night' %}
-      {% endcase %}
-    {% endif %}
-  {% endif %}
-
   {% capture artwork_url %}https://raw.githubusercontent.com/michaelkurath/TRMNL-weather-art/main/artwork/frame/{{ scene }}/{{ artist }}/{{ condition }}{% endcapture %}
   {% capture artwork_alt %}Weather Art, {{ scene }}, {{ condition | replace: '-', ' ' }}{% endcapture %}
   <div class="layout">
