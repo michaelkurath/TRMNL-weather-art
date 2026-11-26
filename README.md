@@ -30,14 +30,14 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Small Village | Picasso | 8 of 8 | 8 of 8 |
 | Big City | Neutral | 8 of 8 | 8 of 8 |
 | Big City | Van Gogh | 8 of 8 | 8 of 8 |
-| Big City | Warhol | 8 of 8 | 1 of 8 (clear) |
+| Big City | Warhol | 8 of 8 | 8 of 8 |
 | Big City | Picasso | 8 of 8 | 8 of 8 |
 | Mountain Lake | Neutral | 8 of 8 | 8 of 8 |
 | Mountain Lake | Van Gogh | 8 of 8 | 8 of 8 |
-| Mountain Lake | Warhol | 8 of 8 | 1 of 8 (clear) |
+| Mountain Lake | Warhol | 8 of 8 | 8 of 8 |
 | Mountain Lake | Picasso | 8 of 8 | 8 of 8 |
 
-All three scenes have all eight night states for Neutral, Picasso, and Van Gogh. The Warhol-inspired Small Village set is also complete. Warhol-inspired Big City and Mountain Lake each need seven more night states, for **28 remaining JPEGs**. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
+All four styles cover eight daytime and eight nighttime weather states in all three scenes, for **384 Frame JPEGs** across the two orientations.
 
 | Neutral night artwork | Small Village landscape | Small Village portrait | Mountain Lake landscape | Mountain Lake portrait |
 | --- | --- | --- | --- | --- |
@@ -137,6 +137,28 @@ All three scenes have all eight night states for Neutral, Picasso, and Van Gogh.
 | Dry wind | [JPEG](artwork/frame/village/warhol/dry-wind-night.jpg) | [JPEG](artwork/frame/village/warhol/dry-wind-night-portrait.jpg) |
 | Snow | [JPEG](artwork/frame/village/warhol/snow-night.jpg) | [JPEG](artwork/frame/village/warhol/snow-night-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/village/warhol/thunderstorm-night.jpg) | [JPEG](artwork/frame/village/warhol/thunderstorm-night-portrait.jpg) |
+
+| Warhol-inspired Big City at night | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/city/warhol/clear-night.jpg) | [JPEG](artwork/frame/city/warhol/clear-night-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/city/warhol/overcast-night.jpg) | [JPEG](artwork/frame/city/warhol/overcast-night-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/city/warhol/fog-night.jpg) | [JPEG](artwork/frame/city/warhol/fog-night-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/city/warhol/calm-rain-night.jpg) | [JPEG](artwork/frame/city/warhol/calm-rain-night-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/city/warhol/windy-rain-night.jpg) | [JPEG](artwork/frame/city/warhol/windy-rain-night-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/city/warhol/dry-wind-night.jpg) | [JPEG](artwork/frame/city/warhol/dry-wind-night-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/city/warhol/snow-night.jpg) | [JPEG](artwork/frame/city/warhol/snow-night-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/city/warhol/thunderstorm-night.jpg) | [JPEG](artwork/frame/city/warhol/thunderstorm-night-portrait.jpg) |
+
+| Warhol-inspired Mountain Lake at night | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/mountain-lake/warhol/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/clear-night-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/mountain-lake/warhol/overcast-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/overcast-night-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/mountain-lake/warhol/fog-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/fog-night-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/mountain-lake/warhol/calm-rain-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/calm-rain-night-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/mountain-lake/warhol/windy-rain-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/windy-rain-night-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/mountain-lake/warhol/dry-wind-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/dry-wind-night-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/mountain-lake/warhol/snow-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/snow-night-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/mountain-lake/warhol/thunderstorm-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/thunderstorm-night-portrait.jpg) |
 
 ### Landscape source resolution
 
