@@ -22,29 +22,33 @@ Use the same **Artist** menu for every scene. If Artist is left blank, saved cho
 
 Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 2560 portrait JPEG. The eight daytime states are clear, overcast, fog, calm rain, windy rain, dry wind, snow, and thunderstorm.
 
-| Scene | Style | Daytime | Clear night |
+| Scene | Style | Daytime | Nighttime |
 | --- | --- | --- | --- |
-| Small Village | Neutral | 8 of 8 | Ready |
-| Small Village | Van Gogh | 8 of 8 | Ready |
-| Small Village | Warhol | 8 of 8 | Ready |
-| Small Village | Picasso | 8 of 8 | Ready |
-| Big City | Neutral | 8 of 8 | Ready |
-| Big City | Van Gogh | 8 of 8 | Ready |
-| Big City | Warhol | 8 of 8 | Ready |
-| Big City | Picasso | 8 of 8 | Ready |
-| Mountain Lake | Neutral | 8 of 8 | Ready |
-| Mountain Lake | Van Gogh | 8 of 8 | Ready |
-| Mountain Lake | Warhol | 8 of 8 | Ready |
-| Mountain Lake | Picasso | 8 of 8 | Ready |
+| Small Village | Neutral | 8 of 8 | 8 of 8 |
+| Small Village | Van Gogh | 8 of 8 | 1 of 8 (clear) |
+| Small Village | Warhol | 8 of 8 | 1 of 8 (clear) |
+| Small Village | Picasso | 8 of 8 | 1 of 8 (clear) |
+| Big City | Neutral | 8 of 8 | 1 of 8 (clear) |
+| Big City | Van Gogh | 8 of 8 | 1 of 8 (clear) |
+| Big City | Warhol | 8 of 8 | 1 of 8 (clear) |
+| Big City | Picasso | 8 of 8 | 1 of 8 (clear) |
+| Mountain Lake | Neutral | 8 of 8 | 1 of 8 (clear) |
+| Mountain Lake | Van Gogh | 8 of 8 | 1 of 8 (clear) |
+| Mountain Lake | Warhol | 8 of 8 | 1 of 8 (clear) |
+| Mountain Lake | Picasso | 8 of 8 | 1 of 8 (clear) |
 
-Clear-night artwork covers every scene and style. Neutral Small Village also has dedicated fog and snow artwork at night. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
+Neutral Small Village has all eight night states. The other 11 scene and style combinations each need seven night states, for **154 remaining JPEGs**. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
 
-| Additional night artwork | Landscape | Portrait |
+| Neutral Small Village at night | Landscape | Portrait |
 | --- | --- | --- |
-| Small Village, Neutral, fog | [JPEG](artwork/frame/village/neutral/fog-night.jpg) | [JPEG](artwork/frame/village/neutral/fog-night-portrait.jpg) |
-| Small Village, Neutral, snow | [JPEG](artwork/frame/village/neutral/snow-night.jpg) | [JPEG](artwork/frame/village/neutral/snow-night-portrait.jpg) |
-
-**Remaining night artwork** covers 82 weather, scene and style combinations (164 JPEGs). Neutral Small Village still needs overcast, calm rain, windy rain, dry wind and thunderstorm. Each of the other 11 scene and style combinations still needs those five conditions, fog and snow.
+| Clear | [JPEG](artwork/frame/village/neutral/clear-night.jpg) | [JPEG](artwork/frame/village/neutral/clear-night-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/village/neutral/overcast-night.jpg) | [JPEG](artwork/frame/village/neutral/overcast-night-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/village/neutral/fog-night.jpg) | [JPEG](artwork/frame/village/neutral/fog-night-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/village/neutral/calm-rain-night.jpg) | [JPEG](artwork/frame/village/neutral/calm-rain-night-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/village/neutral/windy-rain-night.jpg) | [JPEG](artwork/frame/village/neutral/windy-rain-night-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/village/neutral/dry-wind-night.jpg) | [JPEG](artwork/frame/village/neutral/dry-wind-night-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/village/neutral/snow-night.jpg) | [JPEG](artwork/frame/village/neutral/snow-night-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/village/neutral/thunderstorm-night.jpg) | [JPEG](artwork/frame/village/neutral/thunderstorm-night-portrait.jpg) |
 
 ### Landscape source resolution
 
@@ -153,7 +157,7 @@ The Van Gogh compositions use directional brushwork. The Warhol diptychs repeat 
 
 ### Clear nights
 
-All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. Neutral Small Village uses its dedicated fog and snow images whenever Open-Meteo reports the corresponding weather code and a night flag. Other combinations without dedicated nighttime artwork use the daytime image.
+All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. Neutral Small Village also has night artwork for overcast, fog, calm rain, windy rain, dry wind, snow and thunderstorm. Other combinations without dedicated nighttime artwork use the daytime image.
 
 | Scene | Style | Landscape | Portrait |
 | --- | --- | --- | --- |

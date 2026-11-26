@@ -60,7 +60,7 @@
 
   {% if daylight == '0' and scene == 'village' and artist == 'neutral' %}
     {% case condition %}
-      {% when 'fog', 'snow' %}
+      {% when 'overcast', 'fog', 'calm-rain', 'windy-rain', 'dry-wind', 'snow', 'thunderstorm' %}
         {% assign condition = condition | append: '-night' %}
     {% endcase %}
   {% endif %}
