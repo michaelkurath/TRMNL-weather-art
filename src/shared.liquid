@@ -15,6 +15,9 @@
     {% when 'mountain-lake' %}
       {% assign scene = 'mountain-lake' %}
       {% assign requested_artist = 'neutral' %}
+      {% if settings.lake_artist == 'picasso' %}
+        {% assign requested_artist = 'picasso' %}
+      {% endif %}
   {% endcase %}
 
   {% assign artist = 'van-gogh' %}

@@ -17,7 +17,7 @@ custom_fields:
 - keyname: scene
   field_type: select
   name: Scene
-  description: Choose the setting depicted in the artwork. Mountain Lake uses the Neutral style.
+  description: Choose the setting depicted in the artwork.
   options:
   - Small village: village
   - Big city: city
@@ -30,6 +30,9 @@ custom_fields:
   - when: city
     visible:
     - city_artist
+  - when: mountain-lake
+    visible:
+    - lake_artist
 - keyname: artist
   field_type: select
   name: Artist
@@ -52,6 +55,14 @@ custom_fields:
   - Picasso-inspired: picasso
   - Neutral: neutral
   default: current
+- keyname: lake_artist
+  field_type: select
+  name: Artist
+  optional: true
+  options:
+  - Neutral: neutral
+  - Picasso-inspired: picasso
+  default: neutral
 - keyname: weather_location
   field_type: lat_lon
   name: Weather location
