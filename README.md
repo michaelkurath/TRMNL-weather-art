@@ -33,11 +33,11 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Big City | Warhol | 8 of 8 | 1 of 8 (clear) |
 | Big City | Picasso | 8 of 8 | 8 of 8 |
 | Mountain Lake | Neutral | 8 of 8 | 8 of 8 |
-| Mountain Lake | Van Gogh | 8 of 8 | 1 of 8 (clear) |
+| Mountain Lake | Van Gogh | 8 of 8 | 8 of 8 |
 | Mountain Lake | Warhol | 8 of 8 | 1 of 8 (clear) |
 | Mountain Lake | Picasso | 8 of 8 | 8 of 8 |
 
-All three Neutral and Picasso-inspired scenes and Van Gogh–inspired Small Village have all eight night states. Van Gogh–inspired Big City and Mountain Lake and all three Warhol scenes each need seven more night states, for **70 remaining JPEGs**. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
+All three Neutral and Picasso-inspired scenes, plus Van Gogh–inspired Small Village and Mountain Lake, have all eight night states. Van Gogh–inspired Big City and all three Warhol scenes each need seven more night states, for **56 remaining JPEGs**. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
 
 | Neutral night artwork | Small Village landscape | Small Village portrait | Mountain Lake landscape | Mountain Lake portrait |
 | --- | --- | --- | --- | --- |
@@ -104,6 +104,17 @@ All three Neutral and Picasso-inspired scenes and Van Gogh–inspired Small Vill
 | Dry wind | [JPEG](artwork/frame/village/van-gogh/dry-wind-night.jpg) | [JPEG](artwork/frame/village/van-gogh/dry-wind-night-portrait.jpg) |
 | Snow | [JPEG](artwork/frame/village/van-gogh/snow-night.jpg) | [JPEG](artwork/frame/village/van-gogh/snow-night-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/village/van-gogh/thunderstorm-night.jpg) | [JPEG](artwork/frame/village/van-gogh/thunderstorm-night-portrait.jpg) |
+
+| Van Gogh–inspired Mountain Lake at night | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/mountain-lake/van-gogh/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/clear-night-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/mountain-lake/van-gogh/overcast-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/overcast-night-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/mountain-lake/van-gogh/fog-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/fog-night-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/mountain-lake/van-gogh/calm-rain-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/calm-rain-night-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/mountain-lake/van-gogh/windy-rain-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/windy-rain-night-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/mountain-lake/van-gogh/dry-wind-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/dry-wind-night-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/mountain-lake/van-gogh/snow-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/snow-night-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/mountain-lake/van-gogh/thunderstorm-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/thunderstorm-night-portrait.jpg) |
 
 ### Landscape source resolution
 
@@ -212,7 +223,7 @@ The Van Gogh compositions use directional brushwork. The Warhol diptychs repeat 
 
 ### Clear nights
 
-All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. All three Neutral and Picasso-inspired scenes and Van Gogh–inspired Small Village also have night artwork for overcast, fog, calm rain, windy rain, dry wind, snow and thunderstorm. Other combinations without dedicated nighttime artwork use the daytime image.
+All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. All three Neutral and Picasso-inspired scenes, plus Van Gogh–inspired Small Village and Mountain Lake, also have night artwork for overcast, fog, calm rain, windy rain, dry wind, snow and thunderstorm. Other combinations without dedicated nighttime artwork use the daytime image.
 
 | Scene | Style | Landscape | Portrait |
 | --- | --- | --- | --- |
