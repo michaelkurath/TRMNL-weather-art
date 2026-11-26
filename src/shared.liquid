@@ -15,6 +15,10 @@
       {% assign artist = 'neutral' %}
   {% endcase %}
 
+  {% if scene == 'village' and settings.artist == 'picasso' %}
+    {% assign artist = 'picasso' %}
+  {% endif %}
+
   {% assign condition = 'clear' %}
   {% assign wind_kmh = wind_speed | default: 0 | plus: 0 %}
   {% assign code = weather_code | append: '' %}

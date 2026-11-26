@@ -17,10 +17,11 @@ custom_fields:
 - keyname: artist
   field_type: select
   name: Artist
-  description: Choose the artistic treatment.
+  description: Choose the artistic treatment. Picasso-inspired artwork is available for Small village. Big city uses Van Gogh for that selection.
   options:
   - Van Gogh–inspired: van-gogh
   - Warhol-inspired: warhol
+  - Picasso-inspired: picasso
   - Neutral: neutral
   default: van-gogh
 - keyname: scene

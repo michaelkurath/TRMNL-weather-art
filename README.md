@@ -42,6 +42,21 @@ Choose Mountain Lake in the Scene menu. It uses the Neutral treatment for every 
 | Snow | [JPEG](artwork/frame/mountain-lake/neutral/snow.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/snow-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/mountain-lake/neutral/thunderstorm.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/thunderstorm-portrait.jpg) |
 
+### Picasso-inspired Small Village
+
+Select **Picasso-inspired** and **Small village** for an original Cubist interpretation of the village in all eight daytime conditions, with separate landscape and portrait compositions. Big city uses Van Gogh when Picasso is selected. Mountain Lake uses Neutral.
+
+| Weather | Landscape (2560 × 1440) | Portrait (1440 × 2560) |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/village/picasso/clear.jpg) | [JPEG](artwork/frame/village/picasso/clear-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/village/picasso/overcast.jpg) | [JPEG](artwork/frame/village/picasso/overcast-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/village/picasso/fog.jpg) | [JPEG](artwork/frame/village/picasso/fog-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/village/picasso/calm-rain.jpg) | [JPEG](artwork/frame/village/picasso/calm-rain-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/village/picasso/windy-rain.jpg) | [JPEG](artwork/frame/village/picasso/windy-rain-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/village/picasso/dry-wind.jpg) | [JPEG](artwork/frame/village/picasso/dry-wind-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/village/picasso/snow.jpg) | [JPEG](artwork/frame/village/picasso/snow-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/village/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/village/picasso/thunderstorm-portrait.jpg) |
+
 ### Clear night in Small Village
 
 Choose **Small village** and **Neutral** to see the moonlit village when Open-Meteo reports clear sky, night, and wind below 30 km/h. Preview the [landscape](artwork/frame/village/neutral/clear-night.jpg) or [portrait](artwork/frame/village/neutral/clear-night-portrait.jpg) JPEG. The regular weather artwork applies at sunrise, during other weather, and when the day/night or wind reading is missing.
