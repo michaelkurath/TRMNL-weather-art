@@ -61,6 +61,8 @@
   {% assign has_night_art = false %}
   {% if artist == 'neutral' or artist == 'picasso' or artist == 'van-gogh' %}
     {% assign has_night_art = true %}
+  {% elsif artist == 'warhol' and scene == 'village' %}
+    {% assign has_night_art = true %}
   {% endif %}
 
   {% if daylight == '0' and has_night_art %}
