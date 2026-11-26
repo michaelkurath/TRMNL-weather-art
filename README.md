@@ -26,7 +26,7 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | --- | --- | --- | --- |
 | Small Village | Neutral | 8 of 8 | 8 of 8 |
 | Small Village | Van Gogh | 8 of 8 | 8 of 8 |
-| Small Village | Warhol | 8 of 8 | 1 of 8 (clear) |
+| Small Village | Warhol | 8 of 8 | 8 of 8 |
 | Small Village | Picasso | 8 of 8 | 8 of 8 |
 | Big City | Neutral | 8 of 8 | 8 of 8 |
 | Big City | Van Gogh | 8 of 8 | 8 of 8 |
@@ -37,7 +37,7 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Mountain Lake | Warhol | 8 of 8 | 1 of 8 (clear) |
 | Mountain Lake | Picasso | 8 of 8 | 8 of 8 |
 
-All three scenes have all eight night states for Neutral, Picasso, and Van Gogh. Each Warhol scene needs seven more night states, for **42 remaining JPEGs**. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
+All three scenes have all eight night states for Neutral, Picasso, and Van Gogh. The Warhol-inspired Small Village set is also complete. Warhol-inspired Big City and Mountain Lake each need seven more night states, for **28 remaining JPEGs**. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
 
 | Neutral night artwork | Small Village landscape | Small Village portrait | Mountain Lake landscape | Mountain Lake portrait |
 | --- | --- | --- | --- | --- |
@@ -126,6 +126,17 @@ All three scenes have all eight night states for Neutral, Picasso, and Van Gogh.
 | Dry wind | [JPEG](artwork/frame/city/van-gogh/dry-wind-night.jpg) | [JPEG](artwork/frame/city/van-gogh/dry-wind-night-portrait.jpg) |
 | Snow | [JPEG](artwork/frame/city/van-gogh/snow-night.jpg) | [JPEG](artwork/frame/city/van-gogh/snow-night-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/city/van-gogh/thunderstorm-night.jpg) | [JPEG](artwork/frame/city/van-gogh/thunderstorm-night-portrait.jpg) |
+
+| Warhol-inspired Small Village at night | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/village/warhol/clear-night.jpg) | [JPEG](artwork/frame/village/warhol/clear-night-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/village/warhol/overcast-night.jpg) | [JPEG](artwork/frame/village/warhol/overcast-night-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/village/warhol/fog-night.jpg) | [JPEG](artwork/frame/village/warhol/fog-night-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/village/warhol/calm-rain-night.jpg) | [JPEG](artwork/frame/village/warhol/calm-rain-night-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/village/warhol/windy-rain-night.jpg) | [JPEG](artwork/frame/village/warhol/windy-rain-night-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/village/warhol/dry-wind-night.jpg) | [JPEG](artwork/frame/village/warhol/dry-wind-night-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/village/warhol/snow-night.jpg) | [JPEG](artwork/frame/village/warhol/snow-night-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/village/warhol/thunderstorm-night.jpg) | [JPEG](artwork/frame/village/warhol/thunderstorm-night-portrait.jpg) |
 
 ### Landscape source resolution
 
