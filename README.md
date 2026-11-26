@@ -13,10 +13,10 @@ The weather location and the depicted scene are independent. Russikon's weather 
 | Scene | Available styles |
 | --- | --- |
 | Small village | Van Gogh, Warhol, Picasso, Neutral |
-| Big city | Van Gogh, Warhol, Neutral |
-| Mountain Lake | Neutral, applied automatically |
+| Big city | Van Gogh, Warhol, Picasso, Neutral |
+| Mountain Lake | Van Gogh, Warhol, Picasso, Neutral |
 
-In Big City, **Current city style** uses the style already saved by an earlier version of the recipe, or Van Gogh on a fresh installation. Choose a named style to set it explicitly for Big City.
+Use the same **Artist** menu for every scene. **Current style** uses saved selections when available. Fresh installations use Van Gogh for Small Village and Big City, and Neutral for Mountain Lake, until a named style is selected.
 
 ## Artwork coverage
 
@@ -31,15 +31,11 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Big City | Neutral | 8 of 8 | Ready |
 | Big City | Van Gogh | 8 of 8 | Ready |
 | Big City | Warhol | 8 of 8 | Ready |
+| Big City | Picasso | 8 of 8 | Ready |
 | Mountain Lake | Neutral | 8 of 8 | Ready |
-
-### Missing scene and style combinations
-
-| Scene | Styles without coverage |
-| --- | --- |
-| Small Village | Banksy, Dalí |
-| Big City | Picasso, Banksy, Dalí |
-| Mountain Lake | Van Gogh, Warhol, Picasso, Banksy, Dalí |
+| Mountain Lake | Van Gogh | 8 of 8 | Ready |
+| Mountain Lake | Warhol | 8 of 8 | Ready |
+| Mountain Lake | Picasso | 8 of 8 | Ready |
 
 Dedicated night artwork currently covers clear skies. All other nighttime weather uses the corresponding regular weather artwork.
 
@@ -71,7 +67,7 @@ The artist studies reinterpret the clear, fog, and windy-rain compositions. Each
 
 ### Mountain Lake on Frame
 
-Choose Mountain Lake in the Scene menu. The recipe applies the Neutral style automatically.
+Choose **Mountain Lake** in the Scene menu, then pick an artist for the alpine scene. The table below shows the Neutral artwork.
 
 | Weather | Landscape (2560 × 1440) | Portrait (1440 × 2560) |
 | --- | --- | --- |
@@ -100,6 +96,54 @@ Select **Small village**, then **Picasso-inspired**, for an original Cubist inte
 | Snow | [JPEG](artwork/frame/village/picasso/snow.jpg) | [JPEG](artwork/frame/village/picasso/snow-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/village/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/village/picasso/thunderstorm-portrait.jpg) |
 
+### Picasso-inspired Big City
+
+Select **Big city**, then **Picasso-inspired**, for the Cubist treatment of the brick avenue and Art Deco tower.
+
+| Weather | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/city/picasso/clear.jpg) | [JPEG](artwork/frame/city/picasso/clear-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/city/picasso/overcast.jpg) | [JPEG](artwork/frame/city/picasso/overcast-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/city/picasso/fog.jpg) | [JPEG](artwork/frame/city/picasso/fog-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/city/picasso/calm-rain.jpg) | [JPEG](artwork/frame/city/picasso/calm-rain-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/city/picasso/windy-rain.jpg) | [JPEG](artwork/frame/city/picasso/windy-rain-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/city/picasso/dry-wind.jpg) | [JPEG](artwork/frame/city/picasso/dry-wind-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/city/picasso/snow.jpg) | [JPEG](artwork/frame/city/picasso/snow-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/city/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/city/picasso/thunderstorm-portrait.jpg) |
+| Clear night | [JPEG](artwork/frame/city/picasso/clear-night.jpg) | [JPEG](artwork/frame/city/picasso/clear-night-portrait.jpg) |
+
+### Picasso-inspired Mountain Lake
+
+The Cubist set keeps the granite boulder, conifers, and alpine summit across all nine weather states.
+
+| Weather | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/mountain-lake/picasso/clear.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/clear-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/mountain-lake/picasso/overcast.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/overcast-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/mountain-lake/picasso/fog.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/fog-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/mountain-lake/picasso/calm-rain.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/calm-rain-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/mountain-lake/picasso/windy-rain.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/windy-rain-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/mountain-lake/picasso/dry-wind.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/dry-wind-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/mountain-lake/picasso/snow.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/snow-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/mountain-lake/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/thunderstorm-portrait.jpg) |
+| Clear night | [JPEG](artwork/frame/mountain-lake/picasso/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/clear-night-portrait.jpg) |
+
+### Van Gogh and Warhol Mountain Lake
+
+The Van Gogh compositions use directional brushwork. The Warhol diptychs repeat the same view in two ink palettes.
+
+| Weather | Van Gogh landscape | Van Gogh portrait | Warhol landscape | Warhol portrait |
+| --- | --- | --- | --- | --- |
+| Clear | [JPEG](artwork/frame/mountain-lake/van-gogh/clear.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/clear-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/clear.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/clear-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/mountain-lake/van-gogh/overcast.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/overcast-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/overcast.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/overcast-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/mountain-lake/van-gogh/fog.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/fog-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/fog.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/fog-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/mountain-lake/van-gogh/calm-rain.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/calm-rain-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/calm-rain.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/calm-rain-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/mountain-lake/van-gogh/windy-rain.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/windy-rain-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/windy-rain.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/windy-rain-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/mountain-lake/van-gogh/dry-wind.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/dry-wind-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/dry-wind.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/dry-wind-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/mountain-lake/van-gogh/snow.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/snow-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/snow.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/snow-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/mountain-lake/van-gogh/thunderstorm.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/thunderstorm-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/thunderstorm.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/thunderstorm-portrait.jpg) |
+| Clear night | [JPEG](artwork/frame/mountain-lake/van-gogh/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/clear-night-portrait.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/clear-night-portrait.jpg) |
+
 ### Clear nights
 
 All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. The regular weather artwork applies after sunrise, during other weather, and when the day/night or wind reading is missing.
@@ -113,7 +157,11 @@ All supported scene and style combinations have clear-night artwork. It appears 
 | Big City | Neutral | [JPEG](artwork/frame/city/neutral/clear-night.jpg) | [JPEG](artwork/frame/city/neutral/clear-night-portrait.jpg) |
 | Big City | Van Gogh | [JPEG](artwork/frame/city/van-gogh/clear-night.jpg) | [JPEG](artwork/frame/city/van-gogh/clear-night-portrait.jpg) |
 | Big City | Warhol | [JPEG](artwork/frame/city/warhol/clear-night.jpg) | [JPEG](artwork/frame/city/warhol/clear-night-portrait.jpg) |
+| Big City | Picasso | [JPEG](artwork/frame/city/picasso/clear-night.jpg) | [JPEG](artwork/frame/city/picasso/clear-night-portrait.jpg) |
 | Mountain Lake | Neutral | [JPEG](artwork/frame/mountain-lake/neutral/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/clear-night-portrait.jpg) |
+| Mountain Lake | Van Gogh | [JPEG](artwork/frame/mountain-lake/van-gogh/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/van-gogh/clear-night-portrait.jpg) |
+| Mountain Lake | Warhol | [JPEG](artwork/frame/mountain-lake/warhol/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/warhol/clear-night-portrait.jpg) |
+| Mountain Lake | Picasso | [JPEG](artwork/frame/mountain-lake/picasso/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/clear-night-portrait.jpg) |
 
 ## Prototype
 
