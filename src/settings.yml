@@ -59,7 +59,7 @@ custom_fields:
 - keyname: about
   field_type: author_bio
   name: About Weather Art
-  category: art
+  category: art,environment
   description: Weather Art turns your local weather into full-screen art. Choose a scene and a style, then watch the artwork change as the weather does. Illustrations are original AI-assisted studies. Weather data by <a href="https://open-meteo.com/">Open-Meteo</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>). Contact <a href="https://github.com/michaelkurath">Michael Kurath on GitHub</a>.
 name: Weather Art
 description: Art that changes with your weather
