@@ -37,7 +37,14 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Mountain Lake | Warhol | 8 of 8 | Ready |
 | Mountain Lake | Picasso | 8 of 8 | Ready |
 
-Dedicated night artwork currently covers clear skies. All other nighttime weather uses the corresponding regular weather artwork.
+Clear-night artwork covers every scene and style. Neutral Small Village also has dedicated fog and snow artwork at night. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
+
+| Additional night artwork | Landscape | Portrait |
+| --- | --- | --- |
+| Small Village, Neutral, fog | [JPEG](artwork/frame/village/neutral/fog-night.jpg) | [JPEG](artwork/frame/village/neutral/fog-night-portrait.jpg) |
+| Small Village, Neutral, snow | [JPEG](artwork/frame/village/neutral/snow-night.jpg) | [JPEG](artwork/frame/village/neutral/snow-night-portrait.jpg) |
+
+**Remaining night artwork** covers 82 weather, scene and style combinations (164 JPEGs). Neutral Small Village still needs overcast, calm rain, windy rain, dry wind and thunderstorm. Each of the other 11 scene and style combinations still needs those five conditions, fog and snow.
 
 ### Landscape source resolution
 
@@ -146,7 +153,7 @@ The Van Gogh compositions use directional brushwork. The Warhol diptychs repeat 
 
 ### Clear nights
 
-All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. The regular weather artwork applies after sunrise, during other weather, and when the day/night or wind reading is missing.
+All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. Neutral Small Village uses its dedicated fog and snow images whenever Open-Meteo reports the corresponding weather code and a night flag. Other combinations without dedicated nighttime artwork use the daytime image.
 
 | Scene | Style | Landscape | Portrait |
 | --- | --- | --- | --- |

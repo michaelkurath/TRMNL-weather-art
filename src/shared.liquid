@@ -58,6 +58,13 @@
       {% endif %}
   {% endcase %}
 
+  {% if daylight == '0' and scene == 'village' and artist == 'neutral' %}
+    {% case condition %}
+      {% when 'fog', 'snow' %}
+        {% assign condition = condition | append: '-night' %}
+    {% endcase %}
+  {% endif %}
+
   {% capture artwork_url %}https://raw.githubusercontent.com/michaelkurath/TRMNL-weather-art/main/artwork/frame/{{ scene }}/{{ artist }}/{{ condition }}{% endcapture %}
   {% capture artwork_alt %}Weather Art, {{ scene }}, {{ condition | replace: '-', ' ' }}{% endcapture %}
   <div class="layout">
