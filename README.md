@@ -4,11 +4,19 @@
 
 | Setting | Controls |
 | --- | --- |
-| Artist | The visual treatment |
 | Scene | The place depicted in the artwork |
+| Artist | The visual treatment available for the selected scene |
 | Weather location | The location used to retrieve current conditions |
 
 The weather location and the depicted scene are independent. Russikon's weather can drive either the village or the city scene.
+
+| Scene | Available styles |
+| --- | --- |
+| Small village | Van Gogh, Warhol, Picasso, Neutral |
+| Big city | Van Gogh, Warhol, Neutral |
+| Mountain Lake | Neutral, applied automatically |
+
+In Big City, **Current city style** uses the style already saved by an earlier version of the recipe, or Van Gogh on a fresh installation. Choose a named style to set it explicitly for Big City.
 
 ## Composition proofs
 
@@ -29,7 +37,7 @@ The artist studies reinterpret the clear, fog, and windy-rain compositions. Each
 
 ### Mountain Lake on Frame
 
-Choose Mountain Lake in the Scene menu. It uses the Neutral treatment for every Artist selection.
+Choose Mountain Lake in the Scene menu. The recipe applies the Neutral style automatically.
 
 | Weather | Landscape (2560 × 1440) | Portrait (1440 × 2560) |
 | --- | --- | --- |
@@ -44,7 +52,7 @@ Choose Mountain Lake in the Scene menu. It uses the Neutral treatment for every 
 
 ### Picasso-inspired Small Village
 
-Select **Picasso-inspired** and **Small village** for an original Cubist interpretation of the village in all eight daytime conditions, with separate landscape and portrait compositions. Big city uses Van Gogh when Picasso is selected. Mountain Lake uses Neutral.
+Select **Small village**, then **Picasso-inspired**, for an original Cubist interpretation of the village in all eight daytime conditions, with separate landscape and portrait compositions.
 
 | Weather | Landscape (2560 × 1440) | Portrait (1440 × 2560) |
 | --- | --- | --- |
@@ -67,7 +75,7 @@ Open [the procedural village experiment](prototype/procedural-village.html) loca
 
 ## Install on TRMNL
 
-Download [Weather Art.zip](dist/Weather_Art.zip) and use **Plugins → Private Plugin → Import new** in TRMNL. Set **Artist**, **Scene**, and **Weather location**, then save and force refresh if you want to see the new selection immediately. Weather location defaults to Zürich.
+Download [Weather Art.zip](dist/Weather_Art.zip) and use **Plugins → Private Plugin → Import new** in TRMNL. Set **Scene** and **Weather location**, and choose an **Artist** when the scene offers one. Save and force refresh to see the new selection immediately. Weather location defaults to Zürich.
 
 The recipe polls [Open-Meteo](https://open-meteo.com/) hourly for the current weather code, 10 m wind speed, and day/night flag. Weather data is provided under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 

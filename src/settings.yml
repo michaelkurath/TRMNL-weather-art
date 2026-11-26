@@ -14,25 +14,43 @@ id: 552013
 oauth_enabled: 'false'
 oauth_pkce_enabled: 'no'
 custom_fields:
+- keyname: scene
+  field_type: select
+  name: Scene
+  description: Choose the setting depicted in the artwork. Mountain Lake uses the Neutral style.
+  options:
+  - Small village: village
+  - Big city: city
+  - Mountain Lake: mountain-lake
+  default: village
+  conditional_validation:
+  - when: village
+    visible:
+    - artist
+  - when: city
+    visible:
+    - city_artist
 - keyname: artist
   field_type: select
   name: Artist
-  description: Choose the artistic treatment. Picasso-inspired artwork is available for Small village. Big city uses Van Gogh for that selection.
+  optional: true
   options:
   - Van Gogh–inspired: van-gogh
   - Warhol-inspired: warhol
   - Picasso-inspired: picasso
   - Neutral: neutral
   default: van-gogh
-- keyname: scene
+- keyname: city_artist
   field_type: select
-  name: Scene
-  description: Choose the setting depicted in the artwork. Mountain Lake always uses Neutral.
+  name: Artist
+  description: Current city style preserves your existing Big City artwork. New installations start with Van Gogh.
+  optional: true
   options:
-  - Small village: village
-  - Big city: city
-  - Mountain Lake: mountain-lake
-  default: village
+  - Current city style: current
+  - Van Gogh–inspired: van-gogh
+  - Warhol-inspired: warhol
+  - Neutral: neutral
+  default: current
 - keyname: weather_location
   field_type: lat_lon
   name: Weather location
