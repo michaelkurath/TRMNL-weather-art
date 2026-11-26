@@ -31,13 +31,13 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Big City | Neutral | 8 of 8 | 8 of 8 |
 | Big City | Van Gogh | 8 of 8 | 1 of 8 (clear) |
 | Big City | Warhol | 8 of 8 | 1 of 8 (clear) |
-| Big City | Picasso | 8 of 8 | 1 of 8 (clear) |
+| Big City | Picasso | 8 of 8 | 8 of 8 |
 | Mountain Lake | Neutral | 8 of 8 | 8 of 8 |
 | Mountain Lake | Van Gogh | 8 of 8 | 1 of 8 (clear) |
 | Mountain Lake | Warhol | 8 of 8 | 1 of 8 (clear) |
 | Mountain Lake | Picasso | 8 of 8 | 1 of 8 (clear) |
 
-All three Neutral scenes have all eight night states. Each Van Gogh, Warhol and Picasso scene needs seven more night states, for **126 remaining JPEGs**. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
+All three Neutral scenes and Picasso-inspired Big City have all eight night states. Each Van Gogh and Warhol scene, plus Picasso-inspired Small Village and Mountain Lake, needs seven more night states, for **112 remaining JPEGs**. Nighttime conditions without dedicated artwork use the corresponding daytime artwork.
 
 | Neutral night artwork | Small Village landscape | Small Village portrait | Mountain Lake landscape | Mountain Lake portrait |
 | --- | --- | --- | --- | --- |
@@ -60,6 +60,17 @@ All three Neutral scenes have all eight night states. Each Van Gogh, Warhol and 
 | Dry wind | [JPEG](artwork/frame/city/neutral/dry-wind-night.jpg) | [JPEG](artwork/frame/city/neutral/dry-wind-night-portrait.jpg) |
 | Snow | [JPEG](artwork/frame/city/neutral/snow-night.jpg) | [JPEG](artwork/frame/city/neutral/snow-night-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/city/neutral/thunderstorm-night.jpg) | [JPEG](artwork/frame/city/neutral/thunderstorm-night-portrait.jpg) |
+
+| Picasso-inspired Big City at night | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/city/picasso/clear-night.jpg) | [JPEG](artwork/frame/city/picasso/clear-night-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/city/picasso/overcast-night.jpg) | [JPEG](artwork/frame/city/picasso/overcast-night-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/city/picasso/fog-night.jpg) | [JPEG](artwork/frame/city/picasso/fog-night-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/city/picasso/calm-rain-night.jpg) | [JPEG](artwork/frame/city/picasso/calm-rain-night-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/city/picasso/windy-rain-night.jpg) | [JPEG](artwork/frame/city/picasso/windy-rain-night-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/city/picasso/dry-wind-night.jpg) | [JPEG](artwork/frame/city/picasso/dry-wind-night-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/city/picasso/snow-night.jpg) | [JPEG](artwork/frame/city/picasso/snow-night-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/city/picasso/thunderstorm-night.jpg) | [JPEG](artwork/frame/city/picasso/thunderstorm-night-portrait.jpg) |
 
 ### Landscape source resolution
 
@@ -168,7 +179,7 @@ The Van Gogh compositions use directional brushwork. The Warhol diptychs repeat 
 
 ### Clear nights
 
-All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. All three Neutral scenes also have night artwork for overcast, fog, calm rain, windy rain, dry wind, snow and thunderstorm. Other combinations without dedicated nighttime artwork use the daytime image.
+All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. All three Neutral scenes and Picasso-inspired Big City also have night artwork for overcast, fog, calm rain, windy rain, dry wind, snow and thunderstorm. Other combinations without dedicated nighttime artwork use the daytime image.
 
 | Scene | Style | Landscape | Portrait |
 | --- | --- | --- | --- |
