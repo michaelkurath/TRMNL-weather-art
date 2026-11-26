@@ -14,7 +14,7 @@ The weather location and the depicted scene are independent. Russikon's weather 
 | --- | --- |
 | Small village | Van Gogh, Warhol, Picasso, Neutral |
 | Big city | Van Gogh, Warhol, Picasso, Neutral |
-| Mountain Lake | Neutral, applied automatically |
+| Mountain Lake | Neutral, Picasso |
 
 In Big City, **Current city style** uses the style already saved by an earlier version of the recipe, or Van Gogh on a fresh installation. Choose a named style to set it explicitly for Big City.
 
@@ -33,6 +33,7 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Big City | Warhol | 8 of 8 | Ready |
 | Big City | Picasso | 8 of 8 | Ready |
 | Mountain Lake | Neutral | 8 of 8 | Ready |
+| Mountain Lake | Picasso | 8 of 8 | Ready |
 
 ### Missing scene and style combinations
 
@@ -40,7 +41,7 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | --- | --- |
 | Small Village | Banksy, Dalí |
 | Big City | Banksy, Dalí |
-| Mountain Lake | Van Gogh, Warhol, Picasso, Banksy, Dalí |
+| Mountain Lake | Van Gogh, Warhol, Banksy, Dalí |
 
 Dedicated night artwork currently covers clear skies. All other nighttime weather uses the corresponding regular weather artwork.
 
@@ -72,7 +73,7 @@ The artist studies reinterpret the clear, fog, and windy-rain compositions. Each
 
 ### Mountain Lake on Frame
 
-Choose Mountain Lake in the Scene menu. The recipe applies the Neutral style automatically.
+Choose **Mountain Lake** in the Scene menu. Its default is **Neutral**. Select **Picasso-inspired** for the Cubist version.
 
 | Weather | Landscape (2560 × 1440) | Portrait (1440 × 2560) |
 | --- | --- | --- |
@@ -117,6 +118,22 @@ Select **Big city**, then **Picasso-inspired**, for the Cubist treatment of the 
 | Thunderstorm | [JPEG](artwork/frame/city/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/city/picasso/thunderstorm-portrait.jpg) |
 | Clear night | [JPEG](artwork/frame/city/picasso/clear-night.jpg) | [JPEG](artwork/frame/city/picasso/clear-night-portrait.jpg) |
 
+### Picasso-inspired Mountain Lake
+
+The Cubist set keeps the granite boulder, conifers, and alpine summit across all nine weather states.
+
+| Weather | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/mountain-lake/picasso/clear.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/clear-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/mountain-lake/picasso/overcast.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/overcast-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/mountain-lake/picasso/fog.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/fog-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/mountain-lake/picasso/calm-rain.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/calm-rain-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/mountain-lake/picasso/windy-rain.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/windy-rain-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/mountain-lake/picasso/dry-wind.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/dry-wind-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/mountain-lake/picasso/snow.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/snow-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/mountain-lake/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/thunderstorm-portrait.jpg) |
+| Clear night | [JPEG](artwork/frame/mountain-lake/picasso/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/clear-night-portrait.jpg) |
+
 ### Clear nights
 
 All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. The regular weather artwork applies after sunrise, during other weather, and when the day/night or wind reading is missing.
@@ -132,6 +149,7 @@ All supported scene and style combinations have clear-night artwork. It appears 
 | Big City | Warhol | [JPEG](artwork/frame/city/warhol/clear-night.jpg) | [JPEG](artwork/frame/city/warhol/clear-night-portrait.jpg) |
 | Big City | Picasso | [JPEG](artwork/frame/city/picasso/clear-night.jpg) | [JPEG](artwork/frame/city/picasso/clear-night-portrait.jpg) |
 | Mountain Lake | Neutral | [JPEG](artwork/frame/mountain-lake/neutral/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/clear-night-portrait.jpg) |
+| Mountain Lake | Picasso | [JPEG](artwork/frame/mountain-lake/picasso/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/picasso/clear-night-portrait.jpg) |
 
 ## Prototype
 
