@@ -122,7 +122,7 @@ The recipe polls [Open-Meteo](https://open-meteo.com/) hourly for the current we
 
 Neutral, Van Gogh and Warhol each cover all eight daytime weather states for the village and city. Thunderstorm, snowfall and fog codes select their own scenes. Rain and drizzle use windy-rain art at 30 km/h or above and calm-rain art below that speed. Dry conditions at 30 km/h or above use dry-wind art. Otherwise, overcast has its own scene and clear to partly cloudy conditions use clear art. Missing or unknown weather codes use clear art, and missing wind speed leaves the wind variant off.
 
-All four layouts preserve the artwork's aspect ratio. The Frame switches automatically between landscape and dedicated 1440 × 2560 portrait artwork. Each weather state has separate portrait and landscape compositions. The portrait Warhol compositions stack their two ink treatments vertically. Differently shaped layouts can have margins.
+All four layouts preserve the artwork's aspect ratio. Full and quadrant layouts follow screen orientation. The horizontal half always uses landscape artwork, and the vertical half always uses portrait artwork. Each weather state has separate portrait and landscape compositions. The portrait Warhol compositions stack their two ink treatments vertically. Differently shaped layouts can have margins.
 
 The GitHub Sync source lives in `src/` at the repository root. When the plugin is linked to this repository in TRMNL, leave its folder setting blank. Use `trmnlp serve` for local preview. After editing the recipe, rebuild the import ZIP from the repository root with `zip -j dist/Weather_Art.zip src/*.liquid src/settings.yml`.
 
