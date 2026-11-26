@@ -16,7 +16,7 @@ The weather location and the depicted scene are independent. Russikon's weather 
 | Big city | Van Gogh, Warhol, Picasso, Neutral |
 | Mountain Lake | Van Gogh, Warhol, Picasso, Neutral |
 
-Use the same **Artist** menu for every scene. **Current style** uses saved selections when available. Fresh installations use Van Gogh for Small Village and Big City, and Neutral for Mountain Lake, until a named style is selected.
+Use the same **Artist** menu for every scene. **Use saved style** keeps choices from older versions when available. Fresh installations use Van Gogh for Small Village and Big City, and Neutral for Mountain Lake, until a named style is selected.
 
 ## Artwork coverage
 
