@@ -84,3 +84,5 @@ Neutral, Van Gogh and Warhol each cover all eight daytime weather states for the
 All four layouts preserve the artwork's aspect ratio. The Frame switches automatically between landscape and dedicated 1440 × 2560 portrait artwork. Each weather state has separate portrait and landscape compositions. The portrait Warhol compositions stack their two ink treatments vertically. Differently shaped layouts can have margins.
 
 The GitHub Sync source lives in `src/` at the repository root. When the plugin is linked to this repository in TRMNL, leave its folder setting blank. Use `trmnlp serve` for local preview. After editing the recipe, rebuild the import ZIP from the repository root with `zip -j dist/Weather_Art.zip src/*.liquid src/settings.yml`.
+
+To set the plugin icon, download [weather-art-icon.png](artwork/weather-art-icon.png), click the current icon in the TRMNL private plugin settings, and select the PNG.
