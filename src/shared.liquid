@@ -58,6 +58,22 @@
       {% endif %}
   {% endcase %}
 
+  {% assign has_night_art = false %}
+  {% if artist == 'neutral' or artist == 'picasso' %}
+    {% assign has_night_art = true %}
+  {% elsif artist == 'van-gogh' %}
+    {% if scene == 'village' or scene == 'mountain-lake' %}
+      {% assign has_night_art = true %}
+    {% endif %}
+  {% endif %}
+
+  {% if daylight == '0' and has_night_art %}
+    {% case condition %}
+      {% when 'overcast', 'fog', 'calm-rain', 'windy-rain', 'dry-wind', 'snow', 'thunderstorm' %}
+        {% assign condition = condition | append: '-night' %}
+    {% endcase %}
+  {% endif %}
+
   {% capture artwork_url %}https://raw.githubusercontent.com/michaelkurath/TRMNL-weather-art/main/artwork/frame/{{ scene }}/{{ artist }}/{{ condition }}{% endcapture %}
   {% capture artwork_alt %}Weather Art, {{ scene }}, {{ condition | replace: '-', ' ' }}{% endcapture %}
   <div class="layout">
