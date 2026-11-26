@@ -18,39 +18,35 @@ custom_fields:
   field_type: select
   name: Scene
   description: Choose the setting depicted in the artwork. Mountain Lake uses the Neutral style.
+  default: village
   options:
   - Small village: village
   - Big city: city
   - Mountain Lake: mountain-lake
-  default: village
   conditional_validation:
   - when: village
-    visible:
-    - artist
   - when: city
-    visible:
-    - city_artist
 - keyname: artist
   field_type: select
   name: Artist
+  default: van-gogh
   optional: true
   options:
   - Van Gogh–inspired: van-gogh
   - Warhol-inspired: warhol
   - Picasso-inspired: picasso
   - Neutral: neutral
-  default: van-gogh
 - keyname: city_artist
   field_type: select
   name: Artist
   description: Current city style preserves your existing Big City artwork. New installations start with Van Gogh.
+  default: current
   optional: true
   options:
   - Current city style: current
   - Van Gogh–inspired: van-gogh
   - Warhol-inspired: warhol
   - Neutral: neutral
-  default: current
 - keyname: weather_location
   field_type: lat_lon
   name: Weather location
@@ -59,8 +55,9 @@ custom_fields:
 - keyname: about
   field_type: author_bio
   name: About Weather Art
+  description: Weather Art turns your local weather into full-screen art. Choose a scene and a style, then watch the artwork change as the weather does. Illustrations are original AI-assisted studies. Weather data by <a href="https://open-meteo.com/">Open-Meteo</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>).
   category: art,environment
-  description: Weather Art turns your local weather into full-screen art. Choose a scene and a style, then watch the artwork change as the weather does. Illustrations are original AI-assisted studies. Weather data by <a href="https://open-meteo.com/">Open-Meteo</a> (<a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>). Contact <a href="https://github.com/michaelkurath">Michael Kurath on GitHub</a>.
+  github_url: https://github.com/michaelkurath
 name: Weather Art
 description: Art that changes with your weather
 refresh_interval: 60
