@@ -46,9 +46,7 @@
       {% elsif code == '3' %}
         {% assign condition = 'overcast' %}
       {% elsif code == '0' and daylight == '0' and wind_speed != nil and artist == 'neutral' %}
-        {% if scene == 'village' or scene == 'mountain-lake' %}
-          {% assign condition = 'clear-night' %}
-        {% endif %}
+        {% assign condition = 'clear-night' %}
       {% endif %}
   {% endcase %}
 

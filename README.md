@@ -28,7 +28,7 @@ Each completed weather state has landscape and portrait JPEGs. All portrait file
 | Small Village | Van Gogh | 8 of 8 | Missing |
 | Small Village | Warhol | 8 of 8 | Missing |
 | Small Village | Picasso | 8 of 8 | Missing |
-| Big City | Neutral | 8 of 8 | Missing |
+| Big City | Neutral | 8 of 8 | Ready |
 | Big City | Van Gogh | 8 of 8 | Missing |
 | Big City | Warhol | 8 of 8 | Missing |
 | Mountain Lake | Neutral | 8 of 8 | Ready |
@@ -102,7 +102,13 @@ Select **Small village**, then **Picasso-inspired**, for an original Cubist inte
 
 ### Clear nights
 
-**Neutral Small Village** and **Mountain Lake** show their moonlit artwork when Open-Meteo reports clear sky, night, and wind below 30 km/h. Preview Small Village in [landscape](artwork/frame/village/neutral/clear-night.jpg) or [portrait](artwork/frame/village/neutral/clear-night-portrait.jpg). The regular weather artwork applies after sunrise, during other weather, and when the day/night or wind reading is missing.
+All three scenes show their Neutral moonlit artwork when Open-Meteo reports clear sky, night, and wind below 30 km/h. The regular weather artwork applies after sunrise, during other weather, and when the day/night or wind reading is missing.
+
+| Scene | Landscape | Portrait |
+| --- | --- | --- |
+| Small Village | [JPEG](artwork/frame/village/neutral/clear-night.jpg) | [JPEG](artwork/frame/village/neutral/clear-night-portrait.jpg) |
+| Big City | [JPEG](artwork/frame/city/neutral/clear-night.jpg) | [JPEG](artwork/frame/city/neutral/clear-night-portrait.jpg) |
+| Mountain Lake | [JPEG](artwork/frame/mountain-lake/neutral/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/clear-night-portrait.jpg) |
 
 ## Prototype
 
