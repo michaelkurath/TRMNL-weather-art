@@ -13,7 +13,7 @@ The weather location and the depicted scene are independent. Russikon's weather 
 | Scene | Available styles |
 | --- | --- |
 | Small village | Van Gogh, Warhol, Picasso, Neutral |
-| Big city | Van Gogh, Warhol, Neutral |
+| Big city | Van Gogh, Warhol, Picasso, Neutral |
 | Mountain Lake | Neutral, applied automatically |
 
 In Big City, **Current city style** uses the style already saved by an earlier version of the recipe, or Van Gogh on a fresh installation. Choose a named style to set it explicitly for Big City.
@@ -31,6 +31,7 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Big City | Neutral | 8 of 8 | Ready |
 | Big City | Van Gogh | 8 of 8 | Ready |
 | Big City | Warhol | 8 of 8 | Ready |
+| Big City | Picasso | 8 of 8 | Ready |
 | Mountain Lake | Neutral | 8 of 8 | Ready |
 
 ### Missing scene and style combinations
@@ -38,7 +39,7 @@ Each completed weather state has a 2560 × 1440 landscape JPEG and a 1440 × 256
 | Scene | Styles without coverage |
 | --- | --- |
 | Small Village | Banksy, Dalí |
-| Big City | Picasso, Banksy, Dalí |
+| Big City | Banksy, Dalí |
 | Mountain Lake | Van Gogh, Warhol, Picasso, Banksy, Dalí |
 
 Dedicated night artwork currently covers clear skies. All other nighttime weather uses the corresponding regular weather artwork.
@@ -100,6 +101,22 @@ Select **Small village**, then **Picasso-inspired**, for an original Cubist inte
 | Snow | [JPEG](artwork/frame/village/picasso/snow.jpg) | [JPEG](artwork/frame/village/picasso/snow-portrait.jpg) |
 | Thunderstorm | [JPEG](artwork/frame/village/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/village/picasso/thunderstorm-portrait.jpg) |
 
+### Picasso-inspired Big City
+
+Select **Big city**, then **Picasso-inspired**, for the Cubist treatment of the brick avenue and Art Deco tower.
+
+| Weather | Landscape | Portrait |
+| --- | --- | --- |
+| Clear | [JPEG](artwork/frame/city/picasso/clear.jpg) | [JPEG](artwork/frame/city/picasso/clear-portrait.jpg) |
+| Overcast | [JPEG](artwork/frame/city/picasso/overcast.jpg) | [JPEG](artwork/frame/city/picasso/overcast-portrait.jpg) |
+| Fog | [JPEG](artwork/frame/city/picasso/fog.jpg) | [JPEG](artwork/frame/city/picasso/fog-portrait.jpg) |
+| Calm rain | [JPEG](artwork/frame/city/picasso/calm-rain.jpg) | [JPEG](artwork/frame/city/picasso/calm-rain-portrait.jpg) |
+| Windy rain | [JPEG](artwork/frame/city/picasso/windy-rain.jpg) | [JPEG](artwork/frame/city/picasso/windy-rain-portrait.jpg) |
+| Dry wind | [JPEG](artwork/frame/city/picasso/dry-wind.jpg) | [JPEG](artwork/frame/city/picasso/dry-wind-portrait.jpg) |
+| Snow | [JPEG](artwork/frame/city/picasso/snow.jpg) | [JPEG](artwork/frame/city/picasso/snow-portrait.jpg) |
+| Thunderstorm | [JPEG](artwork/frame/city/picasso/thunderstorm.jpg) | [JPEG](artwork/frame/city/picasso/thunderstorm-portrait.jpg) |
+| Clear night | [JPEG](artwork/frame/city/picasso/clear-night.jpg) | [JPEG](artwork/frame/city/picasso/clear-night-portrait.jpg) |
+
 ### Clear nights
 
 All supported scene and style combinations have clear-night artwork. It appears when Open-Meteo reports clear sky, night, and wind below 30 km/h. The regular weather artwork applies after sunrise, during other weather, and when the day/night or wind reading is missing.
@@ -113,6 +130,7 @@ All supported scene and style combinations have clear-night artwork. It appears 
 | Big City | Neutral | [JPEG](artwork/frame/city/neutral/clear-night.jpg) | [JPEG](artwork/frame/city/neutral/clear-night-portrait.jpg) |
 | Big City | Van Gogh | [JPEG](artwork/frame/city/van-gogh/clear-night.jpg) | [JPEG](artwork/frame/city/van-gogh/clear-night-portrait.jpg) |
 | Big City | Warhol | [JPEG](artwork/frame/city/warhol/clear-night.jpg) | [JPEG](artwork/frame/city/warhol/clear-night-portrait.jpg) |
+| Big City | Picasso | [JPEG](artwork/frame/city/picasso/clear-night.jpg) | [JPEG](artwork/frame/city/picasso/clear-night-portrait.jpg) |
 | Mountain Lake | Neutral | [JPEG](artwork/frame/mountain-lake/neutral/clear-night.jpg) | [JPEG](artwork/frame/mountain-lake/neutral/clear-night-portrait.jpg) |
 
 ## Prototype

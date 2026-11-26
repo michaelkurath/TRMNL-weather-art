@@ -5,8 +5,12 @@
     {% when 'city' %}
       {% assign scene = 'city' %}
       {% case settings.city_artist %}
-        {% when 'van-gogh', 'warhol', 'neutral' %}
+        {% when 'van-gogh', 'warhol', 'neutral', 'picasso' %}
           {% assign requested_artist = settings.city_artist %}
+        {% else %}
+          {% if requested_artist == 'picasso' %}
+            {% assign requested_artist = 'van-gogh' %}
+          {% endif %}
       {% endcase %}
     {% when 'mountain-lake' %}
       {% assign scene = 'mountain-lake' %}
@@ -15,12 +19,8 @@
 
   {% assign artist = 'van-gogh' %}
   {% case requested_artist %}
-    {% when 'warhol', 'neutral' %}
+    {% when 'warhol', 'neutral', 'picasso' %}
       {% assign artist = requested_artist %}
-    {% when 'picasso' %}
-      {% if scene == 'village' %}
-        {% assign artist = 'picasso' %}
-      {% endif %}
   {% endcase %}
 
   {% assign condition = 'clear' %}

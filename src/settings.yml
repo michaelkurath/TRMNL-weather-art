@@ -49,6 +49,7 @@ custom_fields:
   - Current city style: current
   - Van Gogh–inspired: van-gogh
   - Warhol-inspired: warhol
+  - Picasso-inspired: picasso
   - Neutral: neutral
   default: current
 - keyname: weather_location
